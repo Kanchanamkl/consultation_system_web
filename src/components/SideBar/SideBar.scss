@@ -1,0 +1,150 @@
+@import '../../colors/systemColors.scss';
+.dash-board-navbar{
+    background-color: $primary-color;
+    height: 85px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+
+  
+}
+.nav-bar-right{
+    margin-right: 20px;
+    display: flex;
+    position: absolute;
+    right: 20px;
+
+}
+
+.nav-text{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 2px  2px;
+    margin-left: 10px;
+    list-style: none;
+    height: 60px;
+    
+}
+
+
+.nav-text a{
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.menu-bars{
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    padding-bottom: 5px;
+}
+
+.nav-menu{
+    background:  $primary-color;
+    width:170px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: .85s;
+}
+
+.nav-menu.active{
+    left: 0;
+    transition: .35s;
+}
+
+
+.nav-text a:hover{
+    background:  $secondary-color;
+    font-weight: bold;
+}
+.nav-menu-items{
+    width: 100%;
+}
+.navbar-toggle{
+    background: $primary-color;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+span{
+    margin-left: 16px;
+}
+
+.login-btn {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin:31px;
+    
+}
+
+.login-btn:hover {
+    background-color: $secondary-color; /* Darker blue on hover */
+}
+
+.login-out-btn{
+    position: relative;
+    top: 130px;
+    background-color: $primary-color;
+    color: white;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin:31px;
+    
+}
+
+.login-out-btn:hover {
+    background-color: $secondary-color; /* Darker blue on hover */
+}
+
+
+
+
+
+.profile-card {
+    position: absolute;
+    top: 10px;
+    right: 170px;
+    background-color: #ffffffa1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px $primary-color;
+    z-index: 100;
+    width: 250px;
+    text-align: center;
+}
+
+
+
+.profile-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
