@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import HeroBG from '../../images/hero_bg.png';
-import './HeroPage.scss';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import HeroBG from "../../images/hero_bg.png";
+import "./HeroPage.scss";
 
 const Hero = () => {
   return (
@@ -18,10 +18,17 @@ const Hero = () => {
 
       <div className="hero-content">
         <h1 className="hero-title">Expert Consultation, Anytime, Anywhere</h1>
-        <p className="hero-subtitle">Connect with professionals in various fields and get the advice you need.</p>
+        <p className="hero-subtitle">
+          Connect with professionals in various fields and get the advice you
+          need.
+        </p>
         <div className="hero-buttons">
-          <a href="/register" className="btn btn-signup">Get Start</a>
-          <a href="/consultant" className="btn btn-join-consultant">Join as Consultant</a>
+          <a href="/register" className="btn btn-signup">
+            Get Start
+          </a>
+          <a href="/consultant-register" className="btn btn-join-consultant">
+            Join as Consultant
+          </a>
         </div>
       </div>
     </div>

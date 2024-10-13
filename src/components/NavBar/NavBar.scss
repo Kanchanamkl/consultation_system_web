@@ -6,6 +6,10 @@
     padding: 11px;
     height: 85px;
     background-color:$primary-color; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 
     .navbar-brand .logo {
       font-size: 1.9rem;
@@ -60,7 +64,7 @@
           font-family: 'Inter', sans-serif;
           &:hover {
             background:$secondary-color;
-            padding: 10px 13px;
+            padding: 10px 10px;
           }
       }
     }

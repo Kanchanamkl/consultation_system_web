@@ -58,12 +58,12 @@ const SideBar = () => {
             <FaBars onClick={showSidebar} />
           </Link>
           <div className="nav-bar-right">
-            <li className="nav-text">
+            <li className="nav-item">
               <Link to="/my-orders">
                 <FaShoppingCart />
               </Link>
             </li>
-            <li className="nav-text">
+            <li className="nav-item">
               <Link onClick={toggleProfileCard}>
                 <FaUser className="profile-icon" />
               </Link>
@@ -79,7 +79,7 @@ const SideBar = () => {
               </Link>
             </li>
 
-            <li className="nav-text">
+            <li className="side-item">
               <Link to="/">
                 <FaHome />
                 <span> Home </span>
@@ -89,10 +89,34 @@ const SideBar = () => {
             {isLoggedIn && (
               <>
 
-                <li className="nav-text">
+                <li className="side-item">
                   <Link to="/users">
                     <FaUsers />
                     <span> Profile </span>
+                  </Link>
+                </li>
+                <li className="side-item">
+                  <Link to="/users">
+                    <FaUsers />
+                    <span> Consultants </span>
+                  </Link>
+                </li>
+                <li className="side-item">
+                  <Link to="/users">
+                    <FaUsers />
+                    <span> Clients </span>
+                  </Link>
+                </li>
+                <li className="side-item">
+                  <Link to="/users">
+                    <FaUsers />
+                    <span> Applications </span>
+                  </Link>
+                </li>
+                <li className="side-item">
+                  <Link to="/users">
+                    <FaUsers />
+                    <span> Appoinments </span>
                   </Link>
                 </li>
               </>
@@ -103,7 +127,7 @@ const SideBar = () => {
                 Logout
               </button>
             ) : (
-              <li className="nav-text">
+              <li className="side-item">
                 <Link to="/login">
                   <span>Login</span>
                 </Link>
