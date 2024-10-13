@@ -32,16 +32,12 @@
         margin-top: 10px;
         border-radius: 5px;
         font-family: 'Inter', sans-serif;
-        &:hover {
-          background: rgba(255, 255, 255, 0.1);
-          padding: 10px 20px;
-        }
-
+  
  
       }
 
       .nav-item-sign-in {
-          background:  #32cd32;
+          background:  $tertiary-color;
           font-weight: 600;
           color: #fff;
           padding: 10px 20px;
@@ -50,11 +46,11 @@
           margin-top: 10px;
           font-family: 'Inter', sans-serif;
           &:hover {
-            background: #228b22;
-            padding: 10px 20px;
+            background:$tertiary-color-hover;
+           
           }
       }
-      .nav-item-contact-us {
+      .nav-item-sign-up {
           background: $secondary-color;
           color: #fff;
           padding: 10px 10px;
@@ -64,7 +60,7 @@
           font-family: 'Inter', sans-serif;
           &:hover {
             background:$secondary-color;
-            padding: 10px 10px;
+           
           }
       }
     }

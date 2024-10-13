@@ -48,7 +48,7 @@
         }
   
         .nav-item-sign-in {
-            background: #32cd32;
+          background: $tertiary-color;
             color: #fff;
             padding: 10px 20px;
             font-size: 1rem;
@@ -58,7 +58,7 @@
             transition: background 0.3s ease;
   
             &:hover {
-              background: #228b22;
+              background: $tertiary-color-hover;
               padding: 10px 20px;
             }
         }
@@ -121,10 +121,10 @@
           }
   
           &.btn-join-consultant {
-            background: #32cd32;
+            background:$tertiary-color;
   
             &:hover {
-              background: #228b22;
+              background:$tertiary-color-hover;
             }
           }
         }
