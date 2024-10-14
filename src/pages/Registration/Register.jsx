@@ -40,7 +40,7 @@ const Register = () => {
     return (
         <div>
             <div className="d-flex justify-content-center align-items-center text-center vh-100 mt-5" style={{backgroundColor: '#D7E4FF'} } >
-                <div className="bg-white p-3 rounded" style={{width: '40%'}}>
+                <div className="bg-white p-3  rounded shadow" style={{width: '30vw', borderRadius: '10px', marginTop: '55px'}}>
                     <h2 className='mb-3 text-primary'>Register</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3 text-start">

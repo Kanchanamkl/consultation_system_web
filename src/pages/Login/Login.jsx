@@ -52,7 +52,7 @@ const Login = () => {
     return (
         <div>
             <div className="d-flex justify-content-center align-items-center text-center vh-100" style={{ backgroundColor: '#D7E4FF' }}>
-                <div className="bg-white p-3 rounded" style={{width : '40%'}}>
+                <div className="bg-white p-3 rounded shadow" style={{width : '30vw' , height: '65vh', borderRadius: '10px', marginTop: '55px'}}>
                     <h2 className='mb-3 text-primary '>Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3 text-start">
@@ -84,7 +84,7 @@ const Login = () => {
                         <button type="submit" className="btn btn-primary">Login</button>
                     </form>
                    
-                    <p className='container my-2'>Don&apos;t have an account?</p>
+                    <p className='container my-2 mt-3'>Don&apos;t have an account?</p>
                     <Link to='/register' className="btn btn-secondary">Register</Link>
                 </div>
             </div>
