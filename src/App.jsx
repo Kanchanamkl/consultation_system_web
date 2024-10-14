@@ -9,6 +9,10 @@ import { StoreContext } from "./StoreContext/StoreContext";
 import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
 import Appoinments from "./pages/Appointments/Appoinments";
+import Clients from "./pages/Clients/Clients";
+import Profile from "./pages/Profile/Profie";
+import Consultants from "./pages/Consultants/Consultant";
+import Applications from "./pages/Applications/Applications";
 
 function App() {
   const { isLoggedIn } = useContext(StoreContext);
@@ -22,6 +26,10 @@ function App() {
             
               <Route path="/" element={<Appoinments />} />
               <Route path="/appointments" element={<Appoinments />} />
+              <Route path="/clients" element={<Clients/>} />
+              <Route path="/consultants" element={<Consultants/>} />
+              <Route path="/profile" element={<Profile/>} />
+              <Route path="/applciations" element={<Applications/>} />
           
           </Routes>
         </>

@@ -88,26 +88,26 @@ const SideBar = () => {
                   </Link>
                 </li>
                 <li className="side-item">
-                  <Link to="/users">
+                  <Link to="/consultants">
                     <FaUserMd />
                     <span> Consultants </span>
                   </Link>
                 </li>
                 <li className="side-item">
-                  <Link to="/users">
+                  <Link to="/profile">
                     <FaUserCircle />
                     <span> Profile </span>
                   </Link>
                 </li>
 
                 <li className="side-item">
-                  <Link to="/users">
+                  <Link to="/clients">
                     <FaUsers />
                     <span> Clients </span>
                   </Link>
                 </li>
                 <li className="side-item">
-                  <Link to="/users">
+                  <Link to="/applciations">
                     <MdOutlinePendingActions />
                     <span> Applications </span>
                   </Link>
