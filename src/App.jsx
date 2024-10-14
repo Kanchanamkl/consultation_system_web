@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StoreContext } from "./StoreContext/StoreContext";
 import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
+import Appoinments from "./pages/Appointments/Appoinments";
 
 function App() {
   const { isLoggedIn } = useContext(StoreContext);
@@ -16,10 +17,12 @@ function App() {
     <>
       {isLoggedIn ? (
         <>
+        <SideBar />
           <Routes>
-            <>
-              <Route path="/" element={<SideBar />} />
-            </>
+            
+              <Route path="/" element={<Appoinments />} />
+              <Route path="/appointments" element={<Appoinments />} />
+          
           </Routes>
         </>
       ) : (

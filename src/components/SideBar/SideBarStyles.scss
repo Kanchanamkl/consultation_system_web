@@ -33,7 +33,7 @@
 .nav-item-new-apointment {
   display: flex;
   align-items: center;
-  padding: 5px 5px;
+  padding: 6px 6px;
   margin-right: 20px;
   margin-top: 8px;
   list-style: none;
@@ -51,7 +51,8 @@
 }
 
 .nav-item-new-apointment span {
-  margin-left: 5px;
+  margin-left: 8px;
+  font-weight: 500;
 }
 
 .nav-item a {
@@ -63,27 +64,26 @@
 .side-item a {
   display: flex;
   align-items: center;
-  padding: 10px 10px;
-  width: 170px;
+  padding: 7px 7px;
+  width: 160px;
   list-style: none;
-  height: 60px;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-}
-
-.side-item a {
+  height: 50px;
   text-decoration: none;
   color: #f5f5f5;
+
+  :hover {
+    background: $secondary-color;
+  }
+
 }
+
 
 .menu-bars {
   margin-left: 2rem;
   font-size: 2rem;
   background: none;
   padding-bottom: 5px;
+  
 }
 
 .nav-menu {
@@ -112,12 +112,13 @@
   background: $secondary-color;
   display: flex;
   align-items: center;
-  padding: 10px 10px;
+  padding: 7px 7px;
   width: 160px;
   list-style: none;
-  height: 60px;
+  height: 50px;
   border: 1px solid #f5f5f583;
-  border-radius: 8px;
+  border-radius: 10px;
+
 }
 .nav-menu-items {
   margin-right: 56px;
@@ -154,11 +155,11 @@ span {
 
 .login-out-btn {
   position: relative;
-  top: 80px;
+  top: 110px;
   left: 20px;
   background-color: $primary-color;
   color: white;
-  border: 2px solid#f5f5f5be;
+  border: 2px solid#f5f5f55d;
   border-radius: 10px;
   font-size: 14px;
   width: 45px;
