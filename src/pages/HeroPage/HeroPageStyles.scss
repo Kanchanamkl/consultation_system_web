@@ -60,6 +60,7 @@
             &:hover {
               background: $tertiary-color-hover;
               padding: 10px 20px;
+            
             }
         }
         .nav-item-contact-us {
@@ -117,6 +118,7 @@
   
             &:hover {
               background: $secondary-color;
+              border: 1px solid #f5f5f5be;
             }
           }
   
@@ -125,6 +127,7 @@
   
             &:hover {
               background:$tertiary-color-hover;
+              border: 1px solid #f5f5f5be;
             }
           }
         }
