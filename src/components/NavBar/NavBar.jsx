@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HeroBG from '../../images/hero_bg.png';
-import './NavBar.scss';
+import './NavBarStyles.scss';
 
 const navbar = () => {
   return (
@@ -12,7 +12,7 @@ const navbar = () => {
         </div>
         <ul className="navbar-links">
           <li className='nav-item-sign-in'><Link to="/login">Sign In</Link></li>
-          <li className='nav-item-sign-up'><a href="/sign-up">Sign Up</a></li>
+          <li className='nav-item-sign-up'><a href="/register">Sign Up</a></li>
         </ul>
       </nav>
     </div>

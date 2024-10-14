@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HeroBG from "../../images/hero_bg.png";
-import "./HeroPage.scss";
+import "./HeroPageStyles.scss";
 
 const Hero = () => {
   return (

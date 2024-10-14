@@ -30,7 +30,7 @@ const StoreContextProvider = (props) => {
         setLastName('');
         setRole('');
         localStorage.clear();
-        navigate('/login'); 
+        navigate('/'); 
     };
 
 

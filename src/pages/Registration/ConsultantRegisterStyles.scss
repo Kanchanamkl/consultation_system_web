@@ -1,9 +1,11 @@
+
+@import "../../colors/systemColors.scss";
 .registration-container {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(223, 223, 223);
+  background-color: $primary-bg-color;
 
 
   .registration-form {
@@ -80,6 +82,9 @@
           background-color: #5a6268;
         }
       }
+    }
+    .login-container{
+      margin-top: 10px;
     }
   }
 }

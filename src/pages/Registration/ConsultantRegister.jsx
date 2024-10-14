@@ -112,7 +112,8 @@ const ConsultantRegister = () => {
 
           <div className="info-text">
             After submitting this form, you'll receive a confirmation email once
-            your profile is reviewed and approved by the admin and will arrange interview sesions with you. 
+            your profile is reviewed and approved by the admin and will arrange
+            interview sesions with you.
           </div>
 
           <button type="submit" className="btn-primary">
@@ -120,9 +121,11 @@ const ConsultantRegister = () => {
           </button>
         </form>
 
-        <Link to="/login" className="btn-secondary">
-          Already Registered? Login
-        </Link>
+        <div className="login-container">
+          <Link to="/login" className="btn-secondary">
+            Already Registered? Login
+          </Link>
+        </div>
       </div>
     </div>
   );

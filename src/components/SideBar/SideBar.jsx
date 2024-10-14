@@ -8,13 +8,12 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-import { IoFastFood, IoLogOut } from "react-icons/io5";
 import { IconContext } from "react-icons/lib";
 import { StoreContext } from "../../StoreContext/StoreContext";
-import { MdTableRestaurant } from "react-icons/md";
+import { MdAssignmentAdd, MdLogout } from "react-icons/md";
 import { FaUsers } from "react-icons/fa6";
 import Swal from "sweetalert2"; // Import SweetAlert2
-import "./SideBar.scss";
+import "./SideBarStyles.scss";
 
 const SideBar = () => {
   const { isLoggedIn, handleLogout, firstName, role, username } =
@@ -58,16 +57,16 @@ const SideBar = () => {
             <FaBars onClick={showSidebar} />
           </Link>
           <div className="nav-bar-right">
-            <li className="nav-item">
-              <Link to="/my-orders">
-                <FaShoppingCart />
-              </Link>
-            </li>
-            <li className="nav-item">
+          <button className="nav-item-new-apointment">
+              <Link to="/new-appointment"><MdAssignmentAdd /></Link><span>Appoinment</span>
+            </button>
+
+          <li className="nav-item">
               <Link onClick={toggleProfileCard}>
-                <FaUser className="profile-icon" />
+                <FaUser  />
               </Link>
             </li>
+
           </div>
         </div>
 
@@ -124,7 +123,7 @@ const SideBar = () => {
 
             {isLoggedIn ? (
               <button onClick={confirmLogout} className="login-out-btn">
-                Logout
+             <span><MdLogout/></span>
               </button>
             ) : (
               <li className="side-item">

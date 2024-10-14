@@ -1,14 +1,14 @@
 @import "../../colors/systemColors.scss";
 .dash-board-navbar {
   background-color: $primary-color;
-  height: 85px;
+  height: 70px;
   display: flex;
   justify-content: start;
   align-items: center;
   width: 100vw;
 }
 .nav-bar-right {
-  margin-right: 20px;
+  margin-right: 5px;
   display: flex;
   position: absolute;
   right: 20px;
@@ -16,25 +16,48 @@
 
 .nav-item {
   display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 2px 2px;
+  margin-top: 8px;
+  justify-content: center;
+  padding: 5px;
   margin-left: 10px;
   list-style: none;
-  height: 60px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #f5f5f5be;
+  border-radius: 10px;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.nav-item-new-apointment {
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+  margin-right: 20px;
+  margin-top: 8px;
+  list-style: none;
+  height: 40px;
+  width: fit-content;
+  background-color: $primary-color;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid #f5f5f5be;
+  color: #f5f5f5;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.nav-item-new-apointment span {
+  margin-left: 5px;
 }
 
 .nav-item a {
   text-decoration: none;
   color: #f5f5f5;
   font-size: 18px;
-  width: 95%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 5px 16px;
-  margin-right: 10px;
-  border-radius: 4px;
 }
 
 .side-item a {
@@ -72,12 +95,12 @@
   position: fixed;
   top: 0;
   left: -100%;
-  transition: 0.55s;
+  transition: 0.4s;
 }
 
 .nav-menu.active {
   left: 0;
-  transition: 0.55s;
+  transition: 0.4s;
 }
 
 .nav-item a:hover {
@@ -93,11 +116,8 @@
   width: 160px;
   list-style: none;
   height: 60px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border: 1px solid #f5f5f583;
+  border-radius: 8px;
 }
 .nav-menu-items {
   margin-right: 56px;
@@ -110,6 +130,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-bottom: 5px;
 }
 span {
   margin-left: 16px;
@@ -133,39 +154,22 @@ span {
 
 .login-out-btn {
   position: relative;
-  top: 100px;
+  top: 80px;
+  left: 20px;
   background-color: $primary-color;
   color: white;
-  padding: 8px 8px;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid#f5f5f5be;
+  border-radius: 10px;
   font-size: 14px;
+  width: 45px;
+  height: 40px;
+  padding-left: 2px;
+  padding-right: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 31px;
+  margin: 30px;
 }
 
 .login-out-btn:hover {
   background-color: $secondary-color; /* Darker blue on hover */
-}
-
-.profile-card {
-  position: absolute;
-  top: 10px;
-  right: 170px;
-  background-color: #ffffffa1;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0px 4px 8px $primary-color;
-  z-index: 100;
-  width: 250px;
-  text-align: center;
-}
-
-.profile-card p {
-  margin: 0;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
 }
