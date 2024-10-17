@@ -1,29 +1,58 @@
-// src/components/DoctorCard.scss
+// src/components/ConsultantCardStyles.scss
+@import "../../colors/systemColors.scss";
 
 .consultn-card {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    width: 250px; /* Set a fixed width for the card */
+  background-color: #ebebeb;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  width: 250px; /* Set a fixed width for the card */
+}
+
+.consultn-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.consultn-name {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.consultn-specialize {
+  color: #61666b;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 6px
+}
+
+// Styles for the button
+.appointment-button {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 2px;
+  &:hover {
+    background-color:$secondary-color-hover;
   }
+}
+
+.appointment-icon {
+  margin-right: 5px; 
   
-  .consultn-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .consultn-name {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
-  .consultn-specialize {
-    color: #6c757d;
-    font-size: 0.9rem;
-  }
-  
+}

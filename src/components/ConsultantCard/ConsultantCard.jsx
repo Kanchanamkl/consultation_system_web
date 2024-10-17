@@ -1,5 +1,6 @@
 import React from "react";
-import "./ConsultantCardStyles.scss"; // Add styles for the DoctorCard component
+import "./ConsultantCardStyles.scss"; // Add styles for the ConsultantCard component
+import { MdAssignmentAdd } from "react-icons/md";
 
 const ConsultantCard = ({ consultant }) => {
   return (
@@ -11,6 +12,9 @@ const ConsultantCard = ({ consultant }) => {
       />
       <h3 className="consultn-name">{consultant.name}</h3>
       <p className="consultn-specialize">{consultant.specialize}</p>
+      <button className="appointment-button">
+      <MdAssignmentAdd className="appointment-icon" /> {/* Add the icon here */}
+        Make an Appointment</button>
     </div>
   );
 };
