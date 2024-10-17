@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StoreContext } from "./StoreContext/StoreContext";
 import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
-import Appoinments from "./pages/Appointments/Appoinments";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Clients from "./pages/Clients/Clients";
 import Profile from "./pages/Profile/Profie";
 import Consultants from "./pages/Consultants/Consultant";
@@ -23,14 +23,12 @@ function App() {
         <>
         <SideBar />
           <Routes>
-            
-              <Route path="/" element={<Appoinments />} />
-              <Route path="/appointments" element={<Appoinments />} />
-              <Route path="/clients" element={<Clients/>} />
-              <Route path="/consultants" element={<Consultants/>} />
-              <Route path="/profile" element={<Profile/>} />
-              <Route path="/applciations" element={<Applications/>} />
-          
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/consultants" element={<Consultants />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/applciations" element={<Applications />} />
           </Routes>
         </>
       ) : (
@@ -41,7 +39,10 @@ function App() {
               <Route path="/" element={<HeroPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/consultant-register" element={<ConsultantRegister />} />
+              <Route
+                path="/consultant-register"
+                element={<ConsultantRegister />}
+              />
             </>
           </Routes>
         </>

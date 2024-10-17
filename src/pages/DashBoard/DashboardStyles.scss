@@ -1,0 +1,65 @@
+@import "../../colors/systemColors.scss";
+
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 85px;
+  background-color: $primary-bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .featured-consultants {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 10px;
+  }
+
+  .spcialities-consultants {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 10px;
+  }
+
+  // Recent Appointments Section
+  .recent-apoinments-consultants {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 10px;
+  }
+
+  .consult-list {
+    display: flex;
+    align-items: center; // Center vertically in the flex container
+    justify-content: space-between; // Space between buttons and cards
+    margin: 20px 0; // Add margin for better spacing
+
+    .pagination-button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #cef5ff;
+      color: rgba(34, 34, 34, 0.664);
+      margin: 0 10px; // Space between buttons and cards
+
+      &:disabled {
+        background-color: #ccc;
+        // cursor: not-allowed;
+      }
+    }
+
+    .left-button {
+      margin-right: auto; // Push left button to the left
+    }
+
+    .right-button {
+      margin-left: auto; // Push right button to the right
+    }
+  }
+
+}

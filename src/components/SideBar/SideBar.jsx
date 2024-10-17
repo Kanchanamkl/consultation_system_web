@@ -23,7 +23,7 @@ const SideBar = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => {
-    setSidebar(!sidebar);
+    setSidebar(!sidebar); 
   };
 
   const [showProfileCard, setShowProfileCard] = useState(false);
@@ -82,9 +82,9 @@ const SideBar = () => {
             {isLoggedIn && (
               <>
                 <li className="side-item">
-                  <Link to="/appointments">
+                  <Link to="/dashboard">
                     <FaHome />
-                    <span> Appointments </span>
+                    <span> Dashboard </span>
                   </Link>
                 </li>
                 <li className="side-item">
