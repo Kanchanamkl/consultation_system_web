@@ -2,13 +2,16 @@
 @import "../../colors/systemColors.scss";
 
 .consultn-card {
-  background-color: #ebebeb;
+  background-color: #f1f0f0;
   border-radius: 8px;
   padding: 12px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
   width: 250px; /* Set a fixed width for the card */
+  &:hover{
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.377);
+  }
 }
 
 .consultn-img {

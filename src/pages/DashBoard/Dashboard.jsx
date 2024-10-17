@@ -3,7 +3,9 @@ import SectionContainer from "../../components/SectionContainer/SectionContainer
 import "./DashboardStyles.scss";
 import consult_list from "/src/assets/fakedata/consult_list.js";
 import ConsultantCard from "../../components/ConsultantCard/ConsultantCard";
+import Specialties from "../../components/Specialties/Specialties";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import RecentAppointments from "../../components/RecentAppointments/RecentAppointments";
 
 const Dashboard = () => {
   const [featuredConsultant, setFeaturedConsultant] = useState([]);
@@ -65,11 +67,15 @@ const Dashboard = () => {
       </div>
 
       <div className="spcialities-consultants">
-        <SectionContainer title="Our Spcialities"></SectionContainer>
+        <SectionContainer title="Our Spcialities">
+        <Specialties />
+        </SectionContainer>
       </div>
 
-      <div className="recent-apoinments-consultants">
-        <SectionContainer title="Recent Appoinments"></SectionContainer>
+      <div className="recent-apointments-consultants">
+        <SectionContainer title="Recent Appointments">
+          <RecentAppointments/>
+        </SectionContainer>
       </div>
     </div>
   );
