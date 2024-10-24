@@ -19,14 +19,14 @@ const Dashboard = () => {
   }, []);
 
   const nextConsults = () => {
-    if (currentIndex + consultsPerPage < featuredConsultant.length) {
-      setCurrentIndex(currentIndex + 1);
+    if (currentIndex != 0) {
+      setCurrentIndex(currentIndex - 1);
     }
   };
 
   const previousConsults = () => {
-    if (currentIndex != 0) {
-      setCurrentIndex(currentIndex - 1);
+    if (currentIndex + consultsPerPage < featuredConsultant.length) {
+      setCurrentIndex(currentIndex + 1);
     }
   };
 
@@ -46,7 +46,7 @@ const Dashboard = () => {
                 currentIndex === 0 ? "disabled" : ""
               }`}
             >
-              <GrFormPrevious size={30}  />
+              <GrFormPrevious size={30}  cursor={"pointer"} />
             </div>
             {currentConsults.map((consult) => (
               <ConsultantCard key={consult.doc_id} consultant={consult} />
@@ -60,15 +60,9 @@ const Dashboard = () => {
                   : ""
               }`}
             >
-              <GrFormNext size={30} />
+              <GrFormNext size={30}  cursor={"pointer"}/>
             </div>
           </div>
-        </SectionContainer>
-      </div>
-
-      <div className="spcialities-consultants">
-        <SectionContainer title="Our Spcialities">
-        <Specialties />
         </SectionContainer>
       </div>
 
@@ -77,6 +71,14 @@ const Dashboard = () => {
           <RecentAppointments/>
         </SectionContainer>
       </div>
+      
+      <div className="spcialities-consultants">
+        <SectionContainer title="Our Spcialities">
+        <Specialties />
+        </SectionContainer>
+      </div>
+
+
     </div>
   );
 };

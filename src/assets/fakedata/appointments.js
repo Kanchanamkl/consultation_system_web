@@ -31,6 +31,14 @@ const appointments = [
       time: "11:00 AM",
       status: "Completed",
     },
+    {
+        id: 5,
+        consultantName: "Dr. John Smith",
+        consultantImg: "https://i.ibb.co/86xBJSh/04.jpg", // Replace with actual image URLs
+        date: "2024-10-20",
+        time: "10:00 AM",
+        status: "Upcoming",
+      },
   ];
   
   export default appointments;

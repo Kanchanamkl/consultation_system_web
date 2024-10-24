@@ -16,9 +16,9 @@ const RecentAppointments = () => {
           />
           </div>
           <div className="details">
-          <h3 className="consultant-name">{appointment.consultantName}</h3>
-          <p className="appointment-date">Date: {appointment.date}</p>
-          <p className="appointment-time">Time: {appointment.time}</p>
+          <h4 className="consultant-name">{appointment.consultantName}</h4>
+          <p className="appointment-date">{appointment.date}</p>
+          <p className="appointment-time">{appointment.time}</p>
           <p
               className={`appointment-status ${
                 appointment.status === "Upcoming"

@@ -10,9 +10,10 @@ import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Clients from "./pages/Clients/Clients";
-import Profile from "./pages/Profile/Profie";
+import Profile from "./pages/Profile/ClientProfile/Profie";
 import Consultants from "./pages/Consultants/Consultant";
 import Applications from "./pages/Applications/Applications";
+import CounsellorProfile from "./pages/Profile/CounsellorProfile/CounsellorProfile";
 
 function App() {
   const { isLoggedIn } = useContext(StoreContext);
