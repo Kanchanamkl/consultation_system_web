@@ -32,6 +32,8 @@ const SideBar = () => {
     setShowProfileCard((prevState) => !prevState);
   };
 
+  const navigate = useNavigate();
+
   const confirmLogout = async () => {
     const result = await Swal.fire({
       title: "Are you sure?",
@@ -56,8 +58,8 @@ const SideBar = () => {
             <FaBars onClick={showSidebar} />
           </Link>
           <div className="nav-bar-right">
-            <button className="nav-item-new-apointment">
-              <Link to="/appointments">
+            <button onClick={()=>navigate("/consultants")} className="nav-item-new-apointment">
+              <Link to="/consultants">
                 <MdAssignmentAdd />
               </Link>
               <span>New Appoinment</span>
@@ -101,9 +103,9 @@ const SideBar = () => {
                 </li>
 
                 <li className="side-item">
-                  <Link to="/clients">
+                  <Link to="/appointments">
                     <FaUsers />
-                    <span> Clients </span>
+                    <span> Appoinments </span>
                   </Link>
                 </li>
                 <li className="side-item">

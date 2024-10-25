@@ -36,7 +36,7 @@ const Profile = () => {
           <div className="left-container">
             <div className="profile-picture-card">
               <img
-                src={`https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_1280.jpg`}
+                src={`https://i.ibb.co/ypmBR9k/08.jpg`}
                 alt="Profile"
               />
               {isEditing && (
@@ -51,6 +51,10 @@ const Profile = () => {
                   }
                 />
               )}
+
+              <h2>
+                {clientInfo.firstName} {clientInfo.lastName}
+              </h2>
             </div>
           </div>
           <div className="right-container">
@@ -103,28 +107,40 @@ const Profile = () => {
                 </>
               ) : (
                 <>
-                  <h2>
-                    {clientInfo.firstName} {clientInfo.lastName}
-                  </h2>
-
                   <p>
-                    <label style={{ marginRight: '60px' }}>Email:</label> {clientInfo.email}
-                  </p>
-                  <p>
-                    <label style={{ marginRight: '47px' }}>Mobile:</label> {clientInfo.mobile}
+                    <label style={{ marginRight: "27px" }}>First Name</label>:{"  "}
+                    {clientInfo.firstName}
                   </p>
 
                   <p>
-                    <label style={{ marginRight: '36px' }}>Birthday:</label> {clientInfo.birthday}
+                    <label style={{ marginRight: "30px" }}>Last Name</label>:{"  "}
+                    {clientInfo.lastName}
+                  </p>
+
+                  <p>
+                    <label style={{ marginRight: "70px" }}>Email</label>:{"  "}
+                    {clientInfo.email}
                   </p>
                   <p>
-                    <label style={{ marginRight: '15px' }}>Occupation:</label> {clientInfo.occupation}
+                    <label style={{ marginRight: "57px" }}>Mobile</label>:{"  "}
+                    {clientInfo.mobile}
+                  </p>
+
+                  <p>
+                    <label style={{ marginRight: "46px" }}>Birthday</label>:{"  "}
+                    {clientInfo.birthday}
                   </p>
                   <p>
-                    <label style={{ marginRight: '45px' }}>Country: </label> {clientInfo.country}
+                    <label style={{ marginRight: "23px" }}>Occupation</label>:{"  "}
+                    {clientInfo.occupation}
                   </p>
                   <p>
-                    <label style={{ marginRight: '78px' }}>City: </label> {clientInfo.city}
+                    <label style={{ marginRight: "50px" }}>Country</label>: {"  "}
+                    {clientInfo.country}
+                  </p>
+                  <p>
+                    <label style={{ marginRight: "80px" }}>City: </label>:{" "}
+                    {clientInfo.city}
                   </p>
 
                   <button onClick={handleEditToggle}>Edit</button>

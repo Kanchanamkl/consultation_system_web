@@ -45,6 +45,24 @@ const ConsultantRegister = () => {
       .catch((err) => console.log(err));
   };
 
+//   Name 
+//  Age 
+//  Address
+// City 
+// District 
+// Are you a psychiatrist? (Yes no radio butoon => if click yes, enable medical qualification upload )
+//  NiC upload
+//  Degree transcript upload
+//  Other qualifications related to counselling/ up to 5 (optional)
+//   Working experience 
+//  Signature image
+//  Terms and conditions agree (check box)
+//  Submit button
+const [isPsychiatrist, setIsPsychiatrist] = useState(false);
+
+const handlePsychiatristChange = (event) => {
+  setIsPsychiatrist(event.target.value === "yes");
+}
   return (
     <div className="registration-container">
       <div className="registration-form">
@@ -52,68 +70,76 @@ const ConsultantRegister = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
-            <input
-              type="text"
-              placeholder="Enter First Name"
-              id="firstName"
-              onChange={(event) => setFirstName(event.target.value)}
-              required
-            />
+            <input type="text" placeholder="Enter First Name" id="firstName" required />
           </div>
           <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
-            <input
-              type="text"
-              placeholder="Enter Last Name"
-              id="lastName"
-              onChange={(event) => setLastName(event.target.value)}
-              required
-            />
+            <input type="text" placeholder="Enter Last Name" id="lastName" required />
           </div>
           <div className="form-group">
-            <label htmlFor="username">Email</label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              id="username"
-              onChange={(event) => setUsername(event.target.value)}
-              required
-            />
+            <label htmlFor="age">Age</label>
+            <input type="number" placeholder="Enter Age" id="age" required />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              id="password"
-              onChange={(event) => setPassword(event.target.value)}
-              required
-            />
+            <label htmlFor="address">Address</label>
+            <textarea placeholder="Enter Address" id="address" required />
           </div>
           <div className="form-group">
-            <label htmlFor="specialization">Specialization</label>
-            <input
-              type="text"
-              placeholder="Enter Specialization"
-              id="specialization"
-              onChange={(event) => setSpecialization(event.target.value)}
-              required
-            />
+            <label htmlFor="city">City</label>
+            <input type="text" placeholder="Enter City" id="city" required />
           </div>
           <div className="form-group">
-            <label htmlFor="contact">Contact Number</label>
-            <textarea
-              placeholder="Enter Contact Number"
-              id="contact"
-              onChange={(event) => setContact(event.target.value)}
-              required
-            />
+            <label htmlFor="district">District</label>
+            <input type="text" placeholder="Enter District" id="district" required />
+          </div>
+          <div className="form-group">
+            <label>Are you a psychiatrist?</label>
+            <div className="psychiatrist">
+            <label htmlFor="yes">Yes</label>
+              <input
+                type="radio"
+                id="yes"
+                name="psychiatrist"
+                value="yes"
+                onChange={handlePsychiatristChange}
+              />
+              <label htmlFor="no">No</label>
+              <input
+                type="radio"
+                id="no"
+                name="psychiatrist"
+                value="no"
+                onChange={handlePsychiatristChange}
+              />
+
+            </div>
+          </div>
+          {isPsychiatrist && (
+            <div className="form-group">
+              <label htmlFor="medicalQualification">Medical Qualification</label>
+              <input type="file" id="medicalQualification" required />
+            </div>
+          )}
+          <div className="form-group">
+            <label htmlFor="nic">NIC File</label>
+            <input type="file" id="nic" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="degreeTranscript">Degree Transcript</label>
+            <input type="file" id="degreeTranscript" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="experience">Working Experience</label>
+            <textarea placeholder="Describe Experience" id="experience" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="signature">Signature</label>
+            <input type="file" id="signature" required />
           </div>
 
           <div className="info-text">
             After submitting this form, you'll receive a confirmation email once
-            your profile is reviewed and approved by the admin and will arrange
-            interview sesions with you.
+            your profile is reviewed and approved.
           </div>
 
           <button type="submit" className="btn-primary">

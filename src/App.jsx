@@ -9,7 +9,7 @@ import { StoreContext } from "./StoreContext/StoreContext";
 import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Clients from "./pages/Clients/Clients";
+import Appointments from "./pages/Appointments/Appointments";
 import Profile from "./pages/Profile/ClientProfile/Profie";
 import Consultants from "./pages/Consultants/Consultant";
 import Applications from "./pages/Applications/Applications";
@@ -26,9 +26,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/clients" element={<Clients />} />
+            <Route path="/appointments" element={<Appointments />} />
             <Route path="/consultants" element={<Consultants />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<CounsellorProfile />} />
             <Route path="/applciations" element={<Applications />} />
           </Routes>
         </>
@@ -40,9 +40,7 @@ function App() {
               <Route path="/" element={<HeroPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route
-                path="/consultant-register"
-                element={<ConsultantRegister />}
+              <Route path="/consultant-register" element={<ConsultantRegister />}
               />
             </>
           </Routes>
