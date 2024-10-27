@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./ConsultantRegisterStyles.scss";
+import "./AddCounselorStyles.scss";
 
-const ConsultantRegister = () => {
+const AddCounselor = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [username, setUsername] = useState("");
@@ -13,6 +13,7 @@ const ConsultantRegister = () => {
   const [contact, setContact] = useState("");
   const [role] = useState("CONSULTANT"); // Predefined role as CONSULTANT
   const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -44,23 +45,33 @@ const ConsultantRegister = () => {
       .catch((err) => console.log(err));
   };
 
-const [isPsychiatrist, setIsPsychiatrist] = useState(false);
+  const [isPsychiatrist, setIsPsychiatrist] = useState(false);
 
-const handlePsychiatristChange = (event) => {
-  setIsPsychiatrist(event.target.value === "yes");
-}
+  const handlePsychiatristChange = (event) => {
+    setIsPsychiatrist(event.target.value === "yes");
+  };
   return (
-    <div className="registration-container">
+    <div className="add-counselor-container">
       <div className="registration-form">
-        <h2>Consultant Registration</h2>
+        <h2>Add Counseller</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
-            <input type="text" placeholder="Enter First Name" id="firstName" required />
+            <input
+              type="text"
+              placeholder="Enter First Name"
+              id="firstName"
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
-            <input type="text" placeholder="Enter Last Name" id="lastName" required />
+            <input
+              type="text"
+              placeholder="Enter Last Name"
+              id="lastName"
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="age">Age</label>
@@ -76,12 +87,17 @@ const handlePsychiatristChange = (event) => {
           </div>
           <div className="form-group">
             <label htmlFor="district">District</label>
-            <input type="text" placeholder="Enter District" id="district" required />
+            <input
+              type="text"
+              placeholder="Enter District"
+              id="district"
+              required
+            />
           </div>
           <div className="form-group">
             <label>Are you a psychiatrist?</label>
             <div className="psychiatrist">
-            <label htmlFor="yes">Yes</label>
+              <label htmlFor="yes">Yes</label>
               <input
                 type="radio"
                 id="yes"
@@ -97,19 +113,22 @@ const handlePsychiatristChange = (event) => {
                 value="no"
                 onChange={handlePsychiatristChange}
               />
-
             </div>
           </div>
           {isPsychiatrist && (
             <div className="form-group">
-              <label htmlFor="medicalQualification">Medical Qualification</label>
+              <label htmlFor="medicalQualification">
+                Medical Qualification
+              </label>
               <input type="file" id="medicalQualification" required />
             </div>
           )}
-           <div className="form-group">
+
+          <div className="form-group">
             <label htmlFor="profile-img">Profile Image</label>
             <input type="file" id="profile-img" required />
           </div>
+
           <div className="form-group">
             <label htmlFor="nic">NIC File</label>
             <input type="file" id="nic" required />
@@ -120,20 +139,19 @@ const handlePsychiatristChange = (event) => {
           </div>
           <div className="form-group">
             <label htmlFor="experience">Working Experience</label>
-            <textarea placeholder="Describe Experience" id="experience" required />
+            <textarea
+              placeholder="Describe Experience"
+              id="experience"
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="signature">Signature</label>
             <input type="file" id="signature" required />
           </div>
 
-          <div className="info-text">
-            After submitting this form, you'll receive a confirmation email once
-            your profile is reviewed and approved.
-          </div>
-
           <button type="submit" className="btn-primary">
-            Submit Application
+            Add Counselor
           </button>
         </form>
 
@@ -147,4 +165,4 @@ const handlePsychiatristChange = (event) => {
   );
 };
 
-export default ConsultantRegister;
+export default AddCounselor;

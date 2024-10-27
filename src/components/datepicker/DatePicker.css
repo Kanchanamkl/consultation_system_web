@@ -1,0 +1,20 @@
+.date-picker {
+    margin-bottom: 20px;
+    
+  }
+  
+  .date-picker label {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+
+
+  .date-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 280px;
+    height: fit-content;
+    padding: 6px;
+  }
+    

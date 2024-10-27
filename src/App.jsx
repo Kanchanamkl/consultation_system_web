@@ -14,6 +14,7 @@ import Profile from "./pages/Profile/ClientProfile/Profie";
 import Consultants from "./pages/Consultants/Consultant";
 import Applications from "./pages/Applications/Applications";
 import CounsellorProfile from "./pages/Profile/CounsellorProfile/CounsellorProfile";
+import AddCounselor from "./pages/AddCounselor/AddCounselorPage";
 
 function App() {
   const { isLoggedIn } = useContext(StoreContext);
@@ -30,6 +31,8 @@ function App() {
             <Route path="/consultants" element={<Consultants />} />
             <Route path="/profile" element={<CounsellorProfile />} />
             <Route path="/applciations" element={<Applications />} />
+            {/* <Route path="/book" element={<BookingPage />} /> */}
+            <Route path="/add-counselor" element={<AddCounselor/>} />
           </Routes>
         </>
       ) : (

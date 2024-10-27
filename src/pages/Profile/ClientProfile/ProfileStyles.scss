@@ -71,6 +71,7 @@
         background-color: #eeebeb;
         border-radius: 12px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 50px;
 
         p {
           font-size: 17px;
@@ -105,15 +106,18 @@
 
         button {
           display: inline-block;
-          padding: 12px 25px;
+          padding: 10px 20px;
           font-size: 16px;
-          background-color: #28a745;
+          background-color: $primary-color;
           color: white;
           border: none;
-          border-radius: 10px;
+          border-radius: 15px;
           cursor: pointer;
-          transition: background-color 0.3s, transform 0.2s;
           margin-top: 10px;
+
+          &:hover{
+            background-color: $primary-color-hover;
+          }
         }
 
         // Style when displaying information instead of inputs

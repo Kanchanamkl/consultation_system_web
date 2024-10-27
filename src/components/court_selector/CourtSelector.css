@@ -1,0 +1,39 @@
+.court-selector {
+    margin-bottom: 10px;
+    
+  }
+  
+  .court-selector label {
+    margin-right: 9px;
+    font-size: 16px;
+  }
+  
+  .court-select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  label{
+    color: rgb(165 180 252);
+    font-weight: 500;
+    font-size: 16px;
+    
+  }
+
+  .court-container {
+    background-color: rgb(255, 254, 254);
+    border-radius: 15px;
+    width: fit-content;
+    height: fit-content;
+    padding: 6px;
+  }
+
+  .court-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    width: 280px;
+    height: fit-content;
+    padding: 6px;
+  }
+    

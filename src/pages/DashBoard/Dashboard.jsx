@@ -37,7 +37,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="featured-consultants">
-        <SectionContainer title="Featured Consultants">
+        <SectionContainer title="Featured Counselors">
           <div className="consult-list">
             {/* Previous Button */}
             <div
