@@ -1,108 +1,85 @@
 const consult_list = [
 
   {
-    doc_id: 2,
+    counselor_id: 2,
     name: "Vrushali Naik",
-    specialize: "Neurology",
-    doc_img:
-      "https://img.freepik.com/premium-photo/woman-lab-coat-with-stethoscope-her-neck-smiles-camera_926968-45.jpg?w=740",
+    specialize: "Marriage and Family Therapists",
+    counselor_img:
+      "https://media.istockphoto.com/id/1395128697/photo/psychologist-session.jpg?s=612x612&w=0&k=20&c=VL2uUVLzrb8VW6WiT-nyvoM3GkZE8kDicDen4uP-MJ0=",
   },
   {
-    doc_id: 4,
-    name: "Aditya Gupta",
-    specialize: "Neurology",
-    doc_img: "https://i.ibb.co/86xBJSh/04.jpg",
-  },
-  {
-    doc_id: 5,
+    counselor_id: 4,
     name: "Vivek k Bansode",
-    specialize: "Cardiology",
-    doc_img: "https://i.ibb.co/hWD7NVx/05.jpg",
+    specialize: "clinical Psychologists",
+    counselor_img: "https://media.gettyimages.com/id/1468678624/photo/nurse-hospital-employee-and-portrait-of-black-man-in-a-healthcare-wellness-and-clinic-feeling.jpg?s=612x612&w=0&k=20&c=AGQPyeEitUPVm3ud_h5_yVX4NKY9mVyXbFf50ZIEtQI=",
   },
   {
-    doc_id: 6,
+    counselor_id: 5,
+    name: "Aditya Gupta",
+    specialize: "Social Worker",
+    counselor_img: "https://media.gettyimages.com/id/1386902483/photo/mental-health-therapist.jpg?s=612x612&w=0&k=20&c=7IMMLLIql2baNxNQFWiI8FWmp024OSzoDXm14iV_wpc=",
+  },
+
+  {
+    counselor_id: 6,
     name: "Pratima J Singh",
-    specialize: "Cardiology",
-    doc_img:
-      "https://i.pinimg.com/736x/9a/49/e1/9a49e1cb9a75abd155f9173f74d648cb.jpg",
+    specialize: "Peer Specialist",
+    counselor_img:
+      "https://media.gettyimages.com/id/1488909526/photo/phychologists-portrait-at-his-office.jpg?s=612x612&w=0&k=20&c=2wMPTB23ZzrfrPC2pX8eC9mj2jdzN9rgYtiWCYgDy54=",
   },
   {
-    doc_id: 7,
-    name: "Amit Lanke",
-    specialize: "Neurology",
-    doc_img: "https://i.ibb.co/dPtTnys/07.jpg",
-  },
-  {
-    doc_id: 8,
-    name: "Johnny Pandit",
-    specialize: "Orthopedics",
-    doc_img: "https://i.ibb.co/ypmBR9k/08.jpg",
-  },
-  {
-    doc_id: 9,
-    name: "Sandip Nehe",
-    specialize: "Medecine",
-    doc_img:
-      "https://i.pinimg.com/736x/38/62/d4/3862d4aade40a268300175392fe81581.jpg",
-  },
-  {
-    doc_id: 10,
-    name: "Vrusrali Nai4",
-    specialize: "Neurology",
-    doc_img:
-      "https://img.freepik.com/premium-photo/woman-lab-coat-with-stethoscope-her-neck-smiles-camera_926968-45.jpg?w=740",
-  },
-  {
-    doc_id: 11,
+    counselor_id: 7,
     name: "Vrushali Naik",
-    specialize: "Neurology",
-    doc_img:
-      "https://img.freepik.com/premium-photo/woman-lab-coat-with-stethoscope-her-neck-smiles-camera_926968-45.jpg?w=740",
+    specialize: "Marriage and Family Therapists",
+    counselor_img:
+      "https://media.istockphoto.com/id/1395128697/photo/psychologist-session.jpg?s=612x612&w=0&k=20&c=VL2uUVLzrb8VW6WiT-nyvoM3GkZE8kDicDen4uP-MJ0=",
   },
   {
-    doc_id: 12,
-    name: "Aditya Gupta",
-    specialize: "Neurology",
-    doc_img: "https://i.ibb.co/86xBJSh/04.jpg",
-  },
-  {
-    doc_id: 13,
+    counselor_id: 8,
     name: "Vivek k Bansode",
-    specialize: "Cardiology",
-    doc_img: "https://i.ibb.co/hWD7NVx/05.jpg",
+    specialize: "clinical Psychologists",
+    counselor_img: "https://media.gettyimages.com/id/1468678624/photo/nurse-hospital-employee-and-portrait-of-black-man-in-a-healthcare-wellness-and-clinic-feeling.jpg?s=612x612&w=0&k=20&c=AGQPyeEitUPVm3ud_h5_yVX4NKY9mVyXbFf50ZIEtQI=",
   },
   {
-    doc_id: 14,
+    counselor_id: 9,
+    name: "Aditya Gupta",
+    specialize: "Social Worker",
+    counselor_img: "https://media.gettyimages.com/id/1386902483/photo/mental-health-therapist.jpg?s=612x612&w=0&k=20&c=7IMMLLIql2baNxNQFWiI8FWmp024OSzoDXm14iV_wpc=",
+  },
+
+  {
+    counselor_id: 10,
     name: "Pratima J Singh",
-    specialize: "Cardiology",
-    doc_img:
-      "https://i.pinimg.com/736x/9a/49/e1/9a49e1cb9a75abd155f9173f74d648cb.jpg",
+    specialize: "Peer Specialist",
+    counselor_img:
+      "https://media.gettyimages.com/id/1488909526/photo/phychologists-portrait-at-his-office.jpg?s=612x612&w=0&k=20&c=2wMPTB23ZzrfrPC2pX8eC9mj2jdzN9rgYtiWCYgDy54=",
   },
   {
-    doc_id: 15,
-    name: "Amit Lanke",
-    specialize: "Neurology",
-    doc_img: "https://i.ibb.co/dPtTnys/07.jpg",
+    counselor_id: 11,
+    name: "Vrushali Naik",
+    specialize: "Marriage and Family Therapists",
+    counselor_img:
+      "https://media.istockphoto.com/id/1395128697/photo/psychologist-session.jpg?s=612x612&w=0&k=20&c=VL2uUVLzrb8VW6WiT-nyvoM3GkZE8kDicDen4uP-MJ0=",
   },
   {
-    doc_id: 16,
-    name: "Johnny Pandit",
-    specialize: "Orthopedics",
-    doc_img: "https://i.ibb.co/ypmBR9k/08.jpg",
+    counselor_id: 12,
+    name: "Vivek k Bansode",
+    specialize: "clinical Psychologists",
+    counselor_img: "https://media.gettyimages.com/id/1468678624/photo/nurse-hospital-employee-and-portrait-of-black-man-in-a-healthcare-wellness-and-clinic-feeling.jpg?s=612x612&w=0&k=20&c=AGQPyeEitUPVm3ud_h5_yVX4NKY9mVyXbFf50ZIEtQI=",
   },
   {
-    doc_id: 17,
-    name: "Sandip Nehe",
-    specialize: "Medecine",
-    doc_img:
-      "https://i.pinimg.com/736x/38/62/d4/3862d4aade40a268300175392fe81581.jpg",
+    counselor_id: 13,
+    name: "Aditya Gupta",
+    specialize: "Social Worker",
+    counselor_img: "https://media.gettyimages.com/id/1386902483/photo/mental-health-therapist.jpg?s=612x612&w=0&k=20&c=7IMMLLIql2baNxNQFWiI8FWmp024OSzoDXm14iV_wpc=",
   },
+
   {
-    doc_id: 18,
-    name: "Vrusrali Nai4",
-    specialize: "Neurology",
-    doc_img:
-      "https://img.freepik.com/premium-photo/woman-lab-coat-with-stethoscope-her-neck-smiles-camera_926968-45.jpg?w=740",
+    counselor_id: 14,
+    name: "Pratima J Singh",
+    specialize: "Peer Specialist",
+    counselor_img:
+      "https://media.gettyimages.com/id/1488909526/photo/phychologists-portrait-at-his-office.jpg?s=612x612&w=0&k=20&c=2wMPTB23ZzrfrPC2pX8eC9mj2jdzN9rgYtiWCYgDy54=",
   },
 ];
 export default consult_list;

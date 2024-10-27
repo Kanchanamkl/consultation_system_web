@@ -49,7 +49,7 @@ const Dashboard = () => {
               <GrFormPrevious size={30}  cursor={"pointer"} />
             </div>
             {currentConsults.map((consult) => (
-              <ConsultantCard key={consult.doc_id} consultant={consult} />
+              <ConsultantCard key={consult.counselor_id} consultant={consult} />
             ))}
             {/* Next Arrow Icon */}
             <div

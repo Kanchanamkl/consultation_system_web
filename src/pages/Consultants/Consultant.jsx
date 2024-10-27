@@ -9,7 +9,7 @@ const Consultants = () => {
       <SectionContainer title="Book an Appoinment">
         <div className="consult-list">
           {consult_list.map((consult) => (
-            <ConsultantCard key={consult.doc_id} consultant={consult} />
+            <ConsultantCard key={consult.counselor_id} consultant={consult} />
           ))}
         </div>
       </SectionContainer>

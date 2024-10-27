@@ -89,12 +89,6 @@ const SideBar = () => {
                     <span> Dashboard </span>
                   </Link>
                 </li>
-                {/* <li className="side-item">
-                  <Link to="/consultants">
-                    <FaUserMd />
-                    <span> Consultants </span>
-                  </Link>
-                </li> */}
                 <li className="side-item">
                   <Link to="/profile">
                     <FaUserCircle />
@@ -104,7 +98,7 @@ const SideBar = () => {
 
                 <li className="side-item">
                   <Link to="/appointments">
-                    <FaUsers />
+                    <FaAddressBook />
                     <span> Appoinments </span>
                   </Link>
                 </li>

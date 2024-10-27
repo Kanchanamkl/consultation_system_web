@@ -2,7 +2,7 @@ const appointments = [
     {
       id: 1,
       consultantName: "Dr. John Smith",
-      consultantImg: "https://i.pinimg.com/736x/9a/49/e1/9a49e1cb9a75abd155f9173f74d648cb.jpg", // Replace with actual image URLs
+      consultantImg: "https://media.istockphoto.com/id/1395128697/photo/psychologist-session.jpg?s=612x612&w=0&k=20&c=VL2uUVLzrb8VW6WiT-nyvoM3GkZE8kDicDen4uP-MJ0=",
       date: "2024-10-20",
       time: "10:00 AM",
       status: "Upcoming",
@@ -18,7 +18,7 @@ const appointments = [
     {
       id: 3,
       consultantName: "Dr. Alice Johnson",
-      consultantImg: "https://img.freepik.com/premium-photo/woman-lab-coat-with-stethoscope-her-neck-smiles-camera_926968-45.jpg?w=740",
+      consultantImg: "https://media.gettyimages.com/id/1386902483/photo/mental-health-therapist.jpg?s=612x612&w=0&k=20&c=7IMMLLIql2baNxNQFWiI8FWmp024OSzoDXm14iV_wpc=",
       date: "2024-10-18",
       time: "1:30 PM",
       status: "Completed",

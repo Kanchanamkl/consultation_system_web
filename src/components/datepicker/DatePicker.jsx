@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './DatePicker.css'
+import './DatePicker.scss'
 
 
 
@@ -15,8 +15,8 @@ const DatePicker = ({ selectedDate, setSelectedDate }) => {
   };
 
   return (
-    <div className="">
-      <label htmlFor="datePicker">Select a Date : </label>
+    <div className="date-picker">
+      <label htmlFor="datePicker">Pick A Date  :  </label>
       <input
         type="date"
         id="datePicker"
