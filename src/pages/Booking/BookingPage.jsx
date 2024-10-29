@@ -15,6 +15,7 @@ const BookingPage = () => {
   const { updateSelectedConsultant } = useContext(StoreContext); 
 
   const navigate = useNavigate();
+  const navigateToCounselors = useNavigate();
 
   const inputRef = useRef(null);
 
@@ -119,9 +120,7 @@ const BookingPage = () => {
 
           </div>
         </div>
-      ) : (
-        <p>No consultant information available</p>
-      )}
+      ) : navigateToCounselors("/consultants")}
 
       <div className="slot-selection">
         <div className="selector-section">
@@ -131,7 +130,7 @@ const BookingPage = () => {
           />
         </div>
         <div className="availability-info">
-          <p>Available Slots on:</p>
+          <p>Available Slots On:</p>
           <label>{selectedDate.toLocaleDateString()}</label>
         </div>
 

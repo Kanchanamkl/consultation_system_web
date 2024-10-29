@@ -1,0 +1,61 @@
+.appointment-card {
+  background-color: #dfdfe0;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 370px;
+  margin: 5px;
+  cursor: pointer;
+
+  .profile-img {
+    width: 35%;
+    margin: 10px;
+
+    img {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      border: 3px solid #7a7d80;
+      margin-right: 15px;
+    }
+  }
+
+  .details {
+    width: 65%;
+    padding: 5px;
+    .consultant-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .appointment-date,
+    .appointment-time {
+      font-size: 0.9rem;
+      color: #343f47;
+      font-weight: 500;
+    }
+
+    .appointment-status {
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 20px; /* Make it rounded */
+      color: #4e4e4e;
+      width: fit-content;
+      margin-top: 6px;
+    }
+
+    .status-upcoming {
+      background-color: #11eb44d2; /* Green background for upcoming */
+    }
+
+    .status-completed {
+      background-color: rgba(41, 144, 253, 0.725);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.377);
+  }
+}

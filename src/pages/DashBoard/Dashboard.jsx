@@ -5,7 +5,7 @@ import consult_list from "/src/assets/fakedata/consult_list.js";
 import ConsultantCard from "../../components/ConsultantCard/ConsultantCard";
 import Specialties from "../../components/Specialties/Specialties";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
-import RecentAppointments from "../../components/RecentAppointments/RecentAppointments";
+import RecentAppointments from "../../components/AppointmentCard/AppointmentCard";
 
 const Dashboard = () => {
   const [featuredConsultant, setFeaturedConsultant] = useState([]);
@@ -34,6 +34,35 @@ const Dashboard = () => {
     currentIndex,
     currentIndex + consultsPerPage
   );
+
+  const appointments = [
+    {
+      id: 1,
+      consultantName: "Dr. John Smith",
+      consultantImg: "https://media.gettyimages.com/id/1468678624/photo/nurse-hospital-employee-and-portrait-of-black-man-in-a-healthcare-wellness-and-clinic-feeling.jpg?s=612x612&w=0&k=20&c=AGQPyeEitUPVm3ud_h5_yVX4NKY9mVyXbFf50ZIEtQI=",
+      date: "2024-10-20",
+      time: "10:00 AM - 12.00 AM",
+      status: "Upcoming",
+    },
+    {
+      id: 2,
+      consultantName: "Aditya Gupta",
+      consultantImg: "https://media.gettyimages.com/id/1386902483/photo/mental-health-therapist.jpg?s=612x612&w=0&k=20&c=7IMMLLIql2baNxNQFWiI8FWmp024OSzoDXm14iV_wpc=",
+      date: "2024-10-21",
+      time: "01:00 PM - 03.00 PM",
+      status: "Upcoming",
+    },
+    {
+      id: 3,
+      consultantName: "Pratima J Singh",
+      consultantImg: "https://media.gettyimages.com/id/1488909526/photo/phychologists-portrait-at-his-office.jpg?s=612x612&w=0&k=20&c=2wMPTB23ZzrfrPC2pX8eC9mj2jdzN9rgYtiWCYgDy54=",
+      date: "2024-10-22",
+      time: "02:00 PM - 04.00 PM",
+      status: "Upcoming",
+    }
+  ];
+
+
   return (
     <div className="dashboard-container">
       <div className="featured-consultants">
@@ -46,7 +75,7 @@ const Dashboard = () => {
                 currentIndex === 0 ? "disabled" : ""
               }`}
             >
-              <GrFormPrevious size={30}  cursor={"pointer"} />
+              <GrFormPrevious size={30} cursor={"pointer"} />
             </div>
             {currentConsults.map((consult) => (
               <ConsultantCard key={consult.counselor_id} consultant={consult} />
@@ -60,7 +89,7 @@ const Dashboard = () => {
                   : ""
               }`}
             >
-              <GrFormNext size={30}  cursor={"pointer"}/>
+              <GrFormNext size={30} cursor={"pointer"} />
             </div>
           </div>
         </SectionContainer>
@@ -68,18 +97,20 @@ const Dashboard = () => {
 
       <div className="recent-apointments-consultants">
         <SectionContainer title="Recent Appointments">
-          <RecentAppointments/>
+          <div className="recentAppoinemts">
+            {appointments.map((appointment) => (
+              <RecentAppointments key={appointment.id} appointment={appointment} />
+            ))}
+          </div>
         </SectionContainer>
       </div>
       
-      <div className="spcialities-consultants">
+      <div className="spcialities-consultants"></div>
         <SectionContainer title="Our Spcialities">
-        <Specialties />
+          <Specialties />
         </SectionContainer>
       </div>
-
-
-    </div>
+    
   );
 };
 
