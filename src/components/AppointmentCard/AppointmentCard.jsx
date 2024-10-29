@@ -7,32 +7,39 @@ import "./AppointmentCardStyles.scss";
   const AppointmentCard = ({ appointment }) => {
   return (
     <div className="appointments-container">
-      {/* {appointments.map((appointment) => ( */}
         <div className="appointment-card" key={appointment.id}>
           <div className="profile-img">
-          <img
-            src={appointment.consultantImg}
-            alt={appointment.consultantName}
-          />
+            <img
+              src={appointment.consultantImg}
+              alt={appointment.consultantName}
+            />
           </div>
           <div className="details">
-          <h4 className="consultant-name">{appointment.consultantName}</h4>
-          <p className="appointment-date">Date : {appointment.date}</p>
-          <p className="appointment-time">Time : {appointment.time}</p>
-          <p
+            <h4 className="consultant-name">{appointment.consultantName}</h4>
+            <p className="appointment-date">Date : {appointment.date}</p>
+            <p className="appointment-time">Time : {appointment.time}</p>
+            <div className="join-section">
+            <p
               className={`appointment-status ${
                 appointment.status === "Upcoming"
                   ? "status-upcoming"
-                  : "status-completed"
+                  : appointment.status === "Completed"
+                  ? "status-completed"
+                  : appointment.status === "Today"
+                  ? "status-today"
+                  : ""
               }`}
             >
-               {appointment.status}
+              {appointment.status}
             </p>
-         
-          </div>
+            {appointment.status === "Today" && (
+              <button className="join-button">Join Now</button>
+            )}
+            </div>
 
+            
+          </div>
         </div>
-      {/* // ))} */}
     </div>
   );
 };

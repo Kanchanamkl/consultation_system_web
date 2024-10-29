@@ -105,7 +105,7 @@ const SideBar = () => {
                 <li className="side-item">
                   <Link to="/applciations">
                     <MdOutlinePendingActions />
-                    <span> Applications </span>
+                    <span> Approvals </span>
                   </Link>
                 </li>
 
