@@ -1,4 +1,5 @@
 @import "../../colors/systemColors.scss";
+
 .appointment-card {
   background-color: #dfdfe0;
   border-radius: 8px;
@@ -25,11 +26,13 @@
 
   .details {
     width: 65%;
-    padding: 5px;
+    padding: 7px;
+
     .consultant-name {
       font-size: 1.2rem;
       font-weight: bold;
     }
+
     .appointment-date,
     .appointment-time {
       font-size: 0.9rem;
@@ -37,50 +40,99 @@
       font-weight: 500;
     }
 
-    .join-section{
+    .join-section {
       display: flex;
+      flex-direction: column;
       gap: 10px;
       .appointment-status {
         font-size: 0.9rem;
         font-weight: 500;
         padding: 5px 10px;
-        border-radius: 20px; 
+        border-radius: 20px;
         color: #4e4e4e;
         width: fit-content;
         margin-top: 6px;
         border: 3px solid #7a7d80;
-        
       }
-  
+
       .status-upcoming {
         background-color: #0992e0d2;
         border: 1.5px solid #7a7d80;
       }
-  
+
       .status-completed {
-        background-color: rgba(252, 207, 60, 0.856);
+        background-color: rgba(159, 167, 175, 0.856);
         border: 1.5px solid #414242;
       }
-      .status-today{
+
+      .status-today {
         background-color: rgba(4, 226, 15, 0.562);
         border: 1.5px solid #414242;
       }
-  
-      .join-button{
-        background-color: $secondary-color;
+
+      .countdown-timer {
+        display: flex;
+        align-items: center;
+        margin: 2px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #343f47;
+        background-color: #f3f0f0;
+        border-radius: 8px;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px ;
+        margin-left: 5px;
+        .timer-component
+         {
+          display: flex;
+          flex-direction: inline;
+          
+          color: #fa3640;
+          font-weight: 500;
+          font-size: 1rem;
+
+    
+        }
+        span{
+          color:#878b8d;
+          margin: 0 5px;
+        }
+        .time-up-message {
+          color: #4e4e4e;
+          font-size: 0.9rem;
+          font-style: italic;
+        }
+        p{
+          color: #7a7d80;
+
+        }
+      }
+
+      .join-button {
+        background-color:rgb(1, 175, 1);
         border: 2px solid #9e9fa0;
         border-radius: 20px;
-        color: #ffff;
+        color: #fff;
         width: 110px;
-        height:fit-content;
-        padding:10px;
+        padding: 10px;
         font-weight: 500;
-        &:hover {
+        transition: box-shadow 0.3s ease;
+        cursor: pointer;
+
+        // Styles for disabled button
+        &:disabled {
+          background-color: #7a7d80;
+          color: #e9e9e9;
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+
+        &:hover:enabled {
           box-shadow: 0px 3px 3px rgba(58, 57, 57, 0.377);
         }
-  }
+      }
     }
-
   }
 
   &:hover {

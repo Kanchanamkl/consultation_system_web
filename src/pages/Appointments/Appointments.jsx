@@ -29,7 +29,7 @@ const Appointments = () => {
       id: 3,
       consultantName: "Pratima J Singh",
       consultantImg: "https://media.gettyimages.com/id/1386902483/photo/mental-health-therapist.jpg?s=612x612&w=0&k=20&c=7IMMLLIql2baNxNQFWiI8FWmp024OSzoDXm14iV_wpc=",
-      date: "2024-10-22",
+      date: "2024-11-31",
       time: "02:00 PM - 04.00 PM",
       status: "Today",
     }

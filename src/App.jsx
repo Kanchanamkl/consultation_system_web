@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StoreContext } from "./StoreContext/StoreContext";
 import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/DashBoard/Dashboard";
 import Appointments from "./pages/Appointments/Appointments";
 import Profile from "./pages/Profile/ClientProfile/Profie";
 import Consultants from "./pages/Consultants/Consultant";
