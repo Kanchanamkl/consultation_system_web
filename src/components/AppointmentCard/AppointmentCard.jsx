@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from "react";
 import appointments from "../../assets/fakedata/appointments"; // Adjust the path based on your structure
 import "./AppointmentCardStyles.scss";
-
+import { useNavigate } from "react-router-dom";
 const AppointmentCard = ({ appointment }) => {
+  const navigate = useNavigate();
   const calculateTimeLeft = () => {
-    const startTime = "2024-10-31T22:48:59"; // Hardcoded start time
+    const startTime = "2024-11-01T13:48:59"; // Hardcoded start time
     const difference = +new Date(startTime) - +new Date();
     let timeLeft = {};
 
@@ -42,10 +43,14 @@ const AppointmentCard = ({ appointment }) => {
 
     timerComponents.push(
       <div key={interval} className="timer-component">
-       <span>{interval}</span> {timeLeft[interval]} {" "}
+        <span>{interval}</span> {timeLeft[interval]}{" "}
       </div>
     );
   });
+
+  const handleNavidate = () => {
+    navigate("/meeting-page");
+  };
 
   return (
     <div className="appointments-container">
@@ -86,7 +91,8 @@ const AppointmentCard = ({ appointment }) => {
                 <div>
                   <button
                     disabled={!isTimeUp}
-                    className={`join-button ${!isTimeUp ? 'disabled' : ''}`}
+                    className={`join-button ${!isTimeUp ? "disabled" : ""}`}
+                    onClick={() => handleNavidate()}
                   >
                     Join Now
                   </button>

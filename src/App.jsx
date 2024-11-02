@@ -16,6 +16,8 @@ import Applications from "./pages/Applications/Applications";
 import CounsellorProfile from "./pages/Profile/CounsellorProfile/CounsellorProfile";
 import AddCounselor from "./pages/AddCounselor/AddCounselorPage";
 import BookingPage from "./pages/Booking/BookingPage";
+import JitsiMeeting from "./components/ChatRoom/JitsiMeeting";
+import MeetingPage from "./pages/MeetingPage/MeetingPage";
 
 function App() {
   const { isLoggedIn } = useContext(StoreContext);
@@ -34,6 +36,7 @@ function App() {
             <Route path="/applciations" element={<Applications />} />
             <Route path="/book" element={<BookingPage/>} />
             <Route path="/add-counselor" element={<AddCounselor/>} />
+            <Route path="/meeting-page" element={<MeetingPage/>} />
           </Routes>
         </>
       ) : (

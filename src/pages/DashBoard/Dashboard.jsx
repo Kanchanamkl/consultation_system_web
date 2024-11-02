@@ -6,6 +6,7 @@ import ConsultantCard from "../../components/ConsultantCard/ConsultantCard";
 import Specialties from "../../components/Specialties/Specialties";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import RecentAppointments from "../../components/AppointmentCard/AppointmentCard";
+import JitsiMeeting from "../../components/ChatRoom/JitsiMeeting";
 
 const Dashboard = () => {
   const [featuredConsultant, setFeaturedConsultant] = useState([]);
@@ -108,6 +109,7 @@ const Dashboard = () => {
       <div className="spcialities-consultants"></div>
         <SectionContainer title="Our Spcialities">
           <Specialties />
+
         </SectionContainer>
       </div>
     
