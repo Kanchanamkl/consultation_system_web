@@ -2,7 +2,7 @@ import React from "react";
 import ConsultantCard from "../../components/ConsultantCard/ConsultantCard";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import "./ConsultantStyles.scss";
-import consult_list from "/src/assets/fakedata/consult_list.js";
+import consult_list from "/src/assets/tempdata/consult_list.js";
 const Consultants = () => {
   return (
     <div className="consultants-container">

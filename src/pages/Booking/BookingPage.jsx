@@ -4,7 +4,7 @@ import BillingPopup from "../../components/billing_popup/BillingPopup";
 import { useLocation, useNavigate } from "react-router-dom";
 import { IoMdCloseCircle } from "react-icons/io";
 import { StoreContext } from "../../StoreContext/StoreContext";
-
+import timeSlots from "../../assets/timeSlots";
 import "./BookingPageStyels.scss"; // Import the SCSS file
 
 const BookingPage = () => {
@@ -17,38 +17,25 @@ const BookingPage = () => {
   const navigate = useNavigate();
   const navigateToCounselors = useNavigate();
 
-  const inputRef = useRef(null);
+  const formatTimeSlot = (slot) => {
+    return `${slot.start.time} ${slot.start.period} - ${slot.end.time} ${slot.end.period}`;
+  };
 
-  const tags = [
-    "6.00 AM - 8.00 AM",
-    "8.00 AM - 10.00 AM",
-    "10.00 AM - 12.00 AM",
-    "12.00 PM - 2.00 PM",
-    "2.00 PM - 4.00 PM",
-    "4.00 PM - 6.00 PM",
-    "6.00 PM - 8.00 PM",
-    "8.00 PM - 10.00 PM",
-  ];
+  const tags_ = timeSlots.map(formatTimeSlot);
 
-  const filteredTags = tags.filter(
+
+  const filteredTags = tags_.filter(
     (item) =>
       item.toLocaleLowerCase().includes(query.toLocaleLowerCase().trim()) &&
       !selected.includes(item)
   );
 
-  const isDisable =
-    !query.trim() ||
-    selected.filter(
-      (item) =>
-        item.toLocaleLowerCase().trim() === query.toLocaleLowerCase().trim()
-    ).length;
 
   const getFirstDayOfCurrentMonth = () => {
     const now = new Date();
     return new Date();
   };
 
-  const [selectedCourt, setSelectedCourt] = useState("Court 1");
   const [selectedDate, setSelectedDate] = useState(getFirstDayOfCurrentMonth());
 
   useEffect(() => {
@@ -58,13 +45,9 @@ const BookingPage = () => {
   // Billing popup
   const [showPopup, setShowPopup] = useState(false);
   const appointmentDetails = {
-    date: "2024-09-23",
-    counselor: "Vrushali Naik",
-    selectedSlots: [
-      "10:00 AM - 11:00 AM",
-      "11:00 AM - 12:00 PM",
-      "12:00 PM - 1:00 PM",
-    ],
+    date: selectedDate.toLocaleDateString(),
+    counselor: selectedConsultant ? selectedConsultant.name : "",
+    selectedSlots: selected,
   };
 
   const handleCheckout = () => {

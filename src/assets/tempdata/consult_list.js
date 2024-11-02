@@ -9,7 +9,7 @@ const consult_list = [
   },
   {
     counselor_id: 4,
-    name: "Vivek k Bansode",
+    name: "Vivek K Bansode",
     specialize: "Clinical Psychologists",
     counselor_img: "https://media.gettyimages.com/id/1468678624/photo/nurse-hospital-employee-and-portrait-of-black-man-in-a-healthcare-wellness-and-clinic-feeling.jpg?s=612x612&w=0&k=20&c=AGQPyeEitUPVm3ud_h5_yVX4NKY9mVyXbFf50ZIEtQI=",
   },

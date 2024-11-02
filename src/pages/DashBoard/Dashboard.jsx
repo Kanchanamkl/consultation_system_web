@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import "./DashboardStyles.scss";
-import consult_list from "/src/assets/fakedata/consult_list.js";
+import consult_list from "/src/assets/tempdata/consult_list.js";
 import ConsultantCard from "../../components/ConsultantCard/ConsultantCard";
 import Specialties from "../../components/Specialties/Specialties";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";

@@ -1,6 +1,6 @@
 // src/components/Specialties.jsx
 import React from "react";
-import specialties from "../../assets/fakedata/specialties"; // Adjust path based on your structure
+import specialties from "../../assets/tempdata/specialties"; // Adjust path based on your structure
 import "./SpecialtiesStyles.scss";
 
 const Specialties = () => {
