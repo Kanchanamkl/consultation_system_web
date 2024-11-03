@@ -1,4 +1,4 @@
-@import "../../colors/systemColors.scss";
+@use '../../colors/systemColors' as sysColors;
 
 .appointment-card {
   background-color: #dfdfe0;

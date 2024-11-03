@@ -1,4 +1,5 @@
-@import '../../colors/systemColors.scss';
+
+@use '../../colors/systemColors' as sysColors;
 
 .hero {
     width: 100%;
@@ -14,7 +15,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 11px;
-      background-color:$primary-color; 
+      background-color:sysColors.$primary-color; 
   
       .navbar-brand .logo {
         font-size: 1.8rem;
@@ -48,7 +49,7 @@
         }
   
         .nav-item-sign-in {
-          background: $tertiary-color;
+          background: sysColors.$tertiary-color;
             color: #fff;
             padding: 10px 20px;
             font-size: 1rem;
@@ -58,7 +59,7 @@
             transition: background 0.3s ease;
   
             &:hover {
-              background: $tertiary-color-hover;
+              background: sysColors.$tertiary-color-hover;
               padding: 10px 20px;
             
             }
@@ -100,19 +101,19 @@
           text-decoration: none;
   
           &.btn-signup {
-            background: $primary-color;
+            background: sysColors.$primary-color;
   
             &:hover {
-              background: $secondary-color;
+              background: sysColors.$secondary-color;
               border: 1px solid #f5f5f5be;
             }
           }
   
           &.btn-join-consultant {
-            background:$tertiary-color;
+            background:sysColors.$tertiary-color;
   
             &:hover {
-              background:$secondary-color;
+              background:sysColors.$secondary-color;
               border: 1px solid #f5f5f5be;
             }
           }

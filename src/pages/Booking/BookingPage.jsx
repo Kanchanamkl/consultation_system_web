@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useContext } from "react";
-import DatePicker from "../../components/datepicker/DatePicker";
-import BillingPopup from "../../components/billing_popup/BillingPopup";
+import DatePicker from "../../components/DatePicker/DatePicker";
+import BillingPopup from "../../components/BillingPopup/BillingPopup";
 import { useLocation, useNavigate } from "react-router-dom";
 import { IoMdCloseCircle } from "react-icons/io";
 import { StoreContext } from "../../StoreContext/StoreContext";

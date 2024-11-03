@@ -1,5 +1,4 @@
-// src/components/ConsultantCardStyles.scss
-@import "../../colors/systemColors.scss";
+@use '../../colors/systemColors' as sysColors;
 
 .consultn-card {
   background-color: #f1f0f0;
@@ -35,7 +34,7 @@
 
 // Styles for the button
 .appointment-button {
-  background-color: $secondary-color;
+  background-color: sysColors.$secondary-color;
   color: white;
   border: none;
   border-radius: 7px;
@@ -51,7 +50,7 @@
   margin-right: 20px;
   margin-top: 2px;
   &:hover {
-    background-color:$secondary-color-hover;
+    background-color:sysColors.$secondary-color-hover;
   }
 }
 

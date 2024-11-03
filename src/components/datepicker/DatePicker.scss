@@ -1,4 +1,4 @@
-@import "../../colors/systemColors.scss";
+@use '../../colors/systemColors' as sysColors;
 .date-picker {
     margin-bottom: 10px;
     gap:20px;
@@ -6,13 +6,13 @@
 
   label{
     font-weight: bold;
-    color:  $font-color-gray;
+    color: sysColors.$font-color-gray;
   }
   
   .date-picker label {
     margin-right: 10px;
     font-size: 16px;
-    color:  $font-color-gray;
+    color:  sysColors.$font-color-gray;
   }
   
 

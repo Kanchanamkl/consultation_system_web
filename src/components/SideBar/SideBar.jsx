@@ -104,13 +104,14 @@ const SideBar = () => {
                     <span> Appointments </span>
                   </Link>
                 </li>
-                <li className="side-item">
-                  <Link to="/profile">
-                    <FaUserCircle />
-                    <span> Profile </span>
-                  </Link>
-                </li>
-
+                {(role === "CLIENT" || role === "COUNSELOR") && (
+                  <li className="side-item">
+                    <Link to="/profile">
+                      <FaUserCircle />
+                      <span> Profile </span>
+                    </Link>
+                  </li>
+                )}
                 {role === "ADMIN" && (
                   <>
                     <li className="side-item">

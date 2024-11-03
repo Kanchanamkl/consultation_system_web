@@ -1,9 +1,8 @@
-@import "../../../colors/systemColors.scss";
+@use '../../../colors/systemColors' as sysColors;
 .counselor-dashbaord-container{
     width: 100%;
     height: 100vh;
-    background-color: $primary-bg-color;
-    justify-content: center;
+    background-color: sysColors.$primary-bg-color;
     display: flex;
     justify-content: center;
     align-items: center;

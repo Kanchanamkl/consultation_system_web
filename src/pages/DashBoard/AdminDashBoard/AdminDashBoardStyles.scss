@@ -1,8 +1,8 @@
-@import "../../../colors/systemColors.scss";
+@use '../../../colors/systemColors' as sysColors;
 .admin-dashboard-container{
     width: 100%;
     height: 100vh;
-    background-color: $primary-bg-color;
+    background-color: sysColors.$primary-bg-color;
     justify-content: center;
     display: flex;
     justify-content: center;

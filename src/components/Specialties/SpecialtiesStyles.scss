@@ -1,4 +1,4 @@
-@import "../../colors/systemColors.scss";
+@use '../../colors/systemColors' as sysColors;
 
 .specialties-container {
   display: flex;
@@ -27,7 +27,7 @@
 
 .specialty-icon {
   font-size: 2rem;
-  color: $secondary-color;
+  color: sysColors.$secondary-color;
   margin-bottom: 10px;
 }
 

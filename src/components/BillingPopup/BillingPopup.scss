@@ -1,4 +1,4 @@
-@import "../../colors/systemColors.scss";
+@use '../../colors/systemColors' as sysColors;
 .billing-popup {
   position: fixed;
   top: 5px;
@@ -12,10 +12,10 @@
   .appointment-summary {
     margin: 5px;
     height: fit-content;
-    background-color: $primary-bg-color;
+    background-color: sysColors.$primary-bg-color;
     padding: 30px;
     border-radius: 10px;
-    color: $font-color-gray;
+    color: sysColors.$font-color-gray;
 
     .header-container {
       display: flex;

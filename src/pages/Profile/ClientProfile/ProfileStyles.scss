@@ -1,4 +1,4 @@
-@import "../../../colors/systemColors.scss";
+@use '../../../colors/systemColors' as sysColors;
 
 .profile-page {
   display: flex;
@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100%;
   min-height: 100vh;
-  background-color: $primary-bg-color;
+  background-color: sysColors.$primary-bg-color;
   padding-top: 120px;
   padding-left: 200px;
   padding-right: 200px;
@@ -108,7 +108,7 @@
           display: inline-block;
           padding: 10px 20px;
           font-size: 16px;
-          background-color: $primary-color;
+          background-color: sysColors.$primary-color;
           color: white;
           border: none;
           border-radius: 15px;
@@ -116,7 +116,7 @@
           margin-top: 10px;
 
           &:hover{
-            background-color: $primary-color-hover;
+            background-color: sysColors.$primary-color-hover;
           }
         }
 

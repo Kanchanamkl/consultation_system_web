@@ -1,6 +1,6 @@
-@import "../../colors/systemColors.scss";
+@use '../../colors/systemColors' as sysColors;
 .dash-board-navbar {
-  background-color: $primary-color;
+  background-color: sysColors.$primary-color;
   height: 70px;
   display: flex;
   justify-content: start;
@@ -29,7 +29,7 @@
   border: 2px solid #f5f5f5be;
   border-radius: 10px;
   &:hover {
-    background-color: $primary-color-hover;
+    background-color: sysColors.$primary-color-hover;
   }
 }
 
@@ -42,14 +42,14 @@
   list-style: none;
   height: 40px;
   width: fit-content;
-  background-color: $primary-color;
+  background-color: sysColors.$primary-color;
   border-radius: 10px;
   text-decoration: none;
   border: 2px solid #f5f5f5be;
   color: #f5f5f5;
 
   &:hover {
-    background-color: $primary-color-hover;
+    background-color: sysColors.$primary-color-hover;
   }
 }
 
@@ -75,7 +75,7 @@
   color: #f5f5f5;
 
   :hover {
-    background: $primary-color-hover;
+    background: sysColors.$primary-color-hover;
   }
 
 }
@@ -90,7 +90,7 @@
 }
 
 .nav-menu {
-  background: $primary-color;
+  background: sysColors.$primary-color;
   width: 170px;
   height: 100vh;
   display: flex;
@@ -107,12 +107,12 @@
 }
 
 .nav-item a:hover {
-  background: $primary-color-hover;
+  background: sysColors.$primary-color-hover;
   font-weight: bold;
 }
 
 .side-item a:hover {
-  background: $primary-color-hover;
+  background: sysColors.$primary-color-hover;
   display: flex;
   align-items: center;
   padding: 6px 6px;
@@ -128,7 +128,7 @@
   width: 100%;
 }
 .navbar-toggle {
-  background: $primary-color;
+  background: sysColors.$primary-color;
   width: 100%;
   height: 80px;
   display: flex;
@@ -141,7 +141,7 @@ span {
 }
 
 .login-btn {
-  background-color: $primary-color;
+  background-color: sysColors.$primary-color;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -153,14 +153,14 @@ span {
 }
 
 .login-btn:hover {
-  background-color: $primary-color-hover; /* Darker blue on hover */
+  background-color: sysColors.$primary-color-hover; /* Darker blue on hover */
 }
 
 .login-out-btn {
   position: relative;
   top: 110px;
   left: 20px;
-  background-color: $primary-color;
+  background-color: sysColors.$primary-color;
   color: white;
   border: 2px solid#f5f5f55d;
   border-radius: 10px;
@@ -175,5 +175,5 @@ span {
 }
 
 .login-out-btn:hover {
-  background-color: $primary-color-hover; /* Darker blue on hover */
+  background-color: sysColors.$primary-color-hover; /* Darker blue on hover */
 }

@@ -8,16 +8,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StoreContext } from "./StoreContext/StoreContext";
 import SideBar from "./components/SideBar/SideBar";
 import ConsultantRegister from "./pages/Registration/ConsultantRegister";
-import Dashboard from "./pages/DashBoard/ClientDashBoard/ClientDashboard";
+import ClientDashBoard from "./pages/DashBoard/ClientDashBoard/ClientDashboard";
 import Profile from "./pages/Profile/ClientProfile/Profie";
 import Consultants from "./pages/Consultants/Consultant";
 import Applications from "./pages/Applications/Applications";
 import CounsellorProfile from "./pages/Profile/CounsellorProfile/CounsellorProfile";
 import AddCounselor from "./pages/AddCounselor/AddCounselorPage";
 import BookingPage from "./pages/Booking/BookingPage";
-import JitsiMeeting from "./components/ChatRoom/JitsiMeeting";
 import MeetingPage from "./pages/MeetingPage/MeetingPage";
 import ClientAppointments from "./pages/Appointments/ClientAppointments/ClientAppointments";
+import AdminAppointments from "./pages/Appointments/AdminAppointments/AdminAppointments";
+import CounselorAppointments from "./pages/Appointments/CounselorAppointments/CounselorAppointments";
+import AdminDashBoard from "./pages/DashBoard/AdminDashBoard/AdminDashBoard";
+import CounselorDashBoard from "./pages/DashBoard/CounselorDashBoard/CounselorDashBoard";
+import ClientDashboard from "./pages/DashBoard/ClientDashBoard/ClientDashboard";
 
 function App() {
   const { isLoggedIn, role } = useContext(StoreContext);
@@ -41,11 +45,10 @@ function App() {
           <>
             <SideBar />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/appointments" element={<Appointments />} />
+              <Route path="/" element={<AdminDashBoard />} />
+              <Route path="/dashboard" element={<AdminDashBoard />} />
+              <Route path="/appointments" element={<AdminAppointments/>} />
               <Route path="/consultants" element={<Consultants />} />
-              <Route path="/profile" element={<CounsellorProfile />} />
               <Route path="/applications" element={<Applications />} />
               <Route path="/book" element={<BookingPage />} />
               <Route path="/add-counselor" element={<AddCounselor />} />
@@ -57,9 +60,9 @@ function App() {
           <>
             <SideBar />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/appointments" element={<Appointments />} />
+              <Route path="/" element={<CounselorDashBoard />} />
+              <Route path="/dashboard" element={<CounselorDashBoard />} />
+              <Route path="/appointments" element={<CounselorAppointments />} />
               <Route path="/profile" element={<CounsellorProfile />} />
               <Route path="/meeting-page" element={<MeetingPage />} />
             </Routes>
@@ -70,8 +73,8 @@ function App() {
           <>
             <SideBar />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/" element={<ClientDashboard />} />
+              <Route path="/dashboard" element={<ClientDashboard />} />
               <Route path="/appointments" element={<ClientAppointments/>} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/book" element={<BookingPage />} />
