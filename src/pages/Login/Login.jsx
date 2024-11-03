@@ -13,6 +13,30 @@ const Login = () => {
     const navigate = useNavigate();
     const { setIsLoggedIn , setFirstName ,setRole , setUsername ,setLastName} = useContext(StoreContext);
 
+    const demoUsers = [
+        {
+            username: 'client@gmail.com',
+            password: 'client@123',
+            role: 'CLIENT',
+            firstName: 'ClientFirstName',
+            lastName: 'ClientLastName'
+        },
+        {
+            username: 'counselor@gmail.com',
+            password: 'counselor@123',
+            role: 'COUNSELOR',
+            firstName: 'CounselorFirstName',
+            lastName: 'CounselorLastName'
+        },
+        {
+            username: 'admin@gmail.com',
+            password: 'admin@123',
+            role: 'ADMIN',
+            firstName: 'AdminFirstName',
+            lastName: 'AdminLastName'
+        }
+    ];
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         
@@ -40,8 +64,21 @@ const Login = () => {
         //         setUsername(username);
         //         setRole(role)
 
-                setIsLoggedIn(true);
-                navigate('/'); 
+        const user = demoUsers.find(user => user.username === email && user.password === password);
+
+        if (user) {
+            setFirstName(user.firstName);
+            setLastName(user.lastName);
+            setUsername(user.username);
+            setRole(user.role);
+            setIsLoggedIn(true);
+            navigate('/');
+        } else {
+            alert('Login failed. Please check your credentials.');
+        }
+ 
+                // setIsLoggedIn(true);
+                // navigate('/'); 
         //     }
         // } catch (error) {
         //     console.error('Login failed:', error);

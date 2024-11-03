@@ -1,9 +1,9 @@
 import React from "react";
-import "./AppointmentsStyles.scss";
-import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import AppointmentCard from "../../components/AppointmentCard/AppointmentCard";
+import "./ClientAppointmentsStyles.scss";
+import SectionContainer from "../../../components/SectionContainer/SectionContainer";
+import AppointmentCard from "../../../components/AppointmentCard/AppointmentCard";
 
-const Appointments = () => {
+const ClientAppointments = () => {
   const upcomming_sessions = [
     {
       id: 1,
@@ -103,4 +103,4 @@ const Appointments = () => {
   );
 };
 
-export default Appointments;
+export default ClientAppointments;

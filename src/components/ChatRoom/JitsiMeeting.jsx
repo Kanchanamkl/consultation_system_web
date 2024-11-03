@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import "./JitisiMeetingStyles.scss";
-import SectionContainer from "../SectionContainer/SectionContainer";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const JitsiMeeting = () => {
@@ -13,37 +12,38 @@ const JitsiMeeting = () => {
 
     const domain = "142.93.215.196"; 
     const options = {
-      roomName: "Demo Meeting",
+      roomName: "DemoMeeting",
       width: "100%",
       height: "80%",
       parentNode: jitsiContainerRef.current,
       interfaceConfigOverwrite: {
-        TOOLBAR_BUTTONS: [
-          "microphone",
-          "camera",
-          "desktop",
-          "fullscreen",
-          "fodeviceselection",
-          "hangup",
-          "profile",
-          "chat",
-          "recording",
-          "settings",
-          "raisehand",
-          "videoquality",
-          "tileview",
-          "download",
-          "help",
-          "mute-everyone",
-        ],
+      TOOLBAR_BUTTONS: [
+        "microphone",
+        // "camera",
+        "desktop",
+        "fullscreen",
+        "fodeviceselection",
+        "hangup",
+        // "profile",
+        "chat",
+        "recording",
+        "raisehand",
+        "videoquality",
+        "tileview",
+        "download",
+        "help",
+        "mute-everyone",
+      ],
       },
       configOverwrite: {
-        disableDeepLinking: true,
+      disableDeepLinking: true,
       },
       userInfo: {
-        displayName: "demo Client",
+      displayName: "demo Client",
       },
     };
+
+    console.log(`Meeting link: https://${domain}/${options.roomName}`);
 
     apiRef.current = new window.JitsiMeetExternalAPI(domain, options);
 
