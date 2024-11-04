@@ -55,4 +55,4 @@ const admin_appointmentsData = [
     },
 ];
 
-export default appointmentsData;
+export default admin_appointmentsData;
