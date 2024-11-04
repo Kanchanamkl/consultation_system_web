@@ -42,20 +42,6 @@
     justify-content: space-between; // Space between buttons and cards
     margin: 20px 0; // Add margin for better spacing
 
-    .pagination-button {
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #cef5ff;
-      color: rgba(34, 34, 34, 0.664);
-      margin: 0 10px; // Space between buttons and cards
-
-      &:disabled {
-        background-color: #ccc;
-        // cursor: not-allowed;
-      }
-    }
 
     .left-button {
       margin-right: auto; // Push left button to the left

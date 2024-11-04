@@ -1,7 +1,7 @@
 @use '../../colors/systemColors' as sysColors;
 
 .consultn-card {
-  background-color: #f1f0f0;
+  background-color: sysColors.$card-bg-color;
   border-radius: 8px;
   padding: 12px;
   text-align: center;
