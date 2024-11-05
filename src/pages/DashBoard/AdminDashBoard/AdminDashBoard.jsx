@@ -19,10 +19,11 @@ const AdminDashBoard = () => {
     labels: ["Clients", "Counselors"],
     datasets: [
       {
-        label: "Count",
+        label: "Users",
         data: [stats.clients, stats.counselors],
         backgroundColor: ["#36A2EB", "#FF6384"],
       },
+        
     ],
   };
 

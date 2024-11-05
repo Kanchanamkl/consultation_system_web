@@ -14,6 +14,8 @@ const DatePicker = ({ selectedDate, setSelectedDate }) => {
     }
   };
 
+ 
+
   return (
     <div className="date-picker">
       <label htmlFor="datePicker">Pick A Date  :  </label>

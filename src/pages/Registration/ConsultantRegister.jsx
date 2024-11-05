@@ -25,7 +25,7 @@ const ConsultantRegister = () => {
       contact,
       role,
     };
-
+  
     // Post the data to your API
     axios
       .post("http://localhost:8080/api/users/create-user", consultantData)
