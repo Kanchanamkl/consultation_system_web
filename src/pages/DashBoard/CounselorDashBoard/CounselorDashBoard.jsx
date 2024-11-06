@@ -2,6 +2,7 @@ import React from "react";
 import { Bar, Pie } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend } from 'chart.js';
 import "./CounselorDashBoardStyles.scss";
+import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 
 // Register the components
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend);
@@ -26,7 +27,8 @@ const CounselorDashBoard = () => {
 
   return (
     <div className="counselor-dashboard-container">
-      <h1>Counselor Dashboard</h1>
+      <SectionContainer title={"Counselor Dashboard"}>
+    
       <div className="stats-container">
         <div className="stat-card">
           <h2>Total Clients</h2>
@@ -51,6 +53,7 @@ const CounselorDashBoard = () => {
           <Pie data={pieData} />
         </div>
       </div>
+      </SectionContainer>
     </div>
   );
 };

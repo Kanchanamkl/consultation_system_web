@@ -5,7 +5,7 @@ import consult_list from "/src/assets/tempdata/consult_list.js";
 import ConsultantCard from "../../../components/ConsultantCard/ConsultantCard";
 import Specialties from "../../../components/Specialties/Specialties";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
-import RecentAppointments from "../../../components/AppointmentCard/AppointmentCard";
+import RecentAppointments from "../../../components/AppointmentCard/ClientAppointmentCard/ClientAppointmentCard";
 import JitsiMeeting from "../../../components/ChatRoom/JitsiMeeting";
 
 const ClientDashboard = () => {
@@ -111,10 +111,11 @@ const ClientDashboard = () => {
         </SectionContainer>
       </div>
 
-      <div className="spcialities-consultants"></div>
+      <div className="spcialities-consultants">
       <SectionContainer title="Our Spcialities">
         <Specialties />
       </SectionContainer>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ClientAppointmentsStyles.scss";
 import SectionContainer from "../../../components/SectionContainer/SectionContainer";
-import AppointmentCard from "../../../components/AppointmentCard/AppointmentCard";
+import AppointmentCard from "../../../components/AppointmentCard/ClientAppointmentCard/ClientAppointmentCard";
 
 const ClientAppointments = () => {
   const upcomming_sessions = [

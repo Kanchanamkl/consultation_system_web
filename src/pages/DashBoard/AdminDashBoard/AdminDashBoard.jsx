@@ -2,6 +2,7 @@ import React from "react";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Bar, Pie } from "react-chartjs-2";
 import "./AdminDashBoardStyles.scss";
+import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 
 // Register the components
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend);
@@ -39,6 +40,7 @@ const AdminDashBoard = () => {
 
   return (
     <div className="admin-dashboard-container">
+      <SectionContainer title={"DashBoard"}>
       <div className="stats-container">
         <div className="stat-card">
           <h2>Clients</h2>
@@ -71,6 +73,7 @@ const AdminDashBoard = () => {
           <Pie data={pieData} />
         </div>
       </div>
+      </SectionContainer>
     </div>
   );
 };

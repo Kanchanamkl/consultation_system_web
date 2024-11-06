@@ -1,7 +1,6 @@
 // src/components/RecentAppointments.jsx
 import React, { useState, useEffect } from "react";
-import appointments from "../../assets/tempdata/appointments"; // Adjust the path based on your structure
-import "./AppointmentCardStyles.scss";
+import "./ClientAppointmentCardStyles.scss";
 import { useNavigate } from "react-router-dom";
 const AppointmentCard = ({ appointment }) => {
   const navigate = useNavigate();
@@ -12,7 +11,7 @@ const AppointmentCard = ({ appointment }) => {
 
   return (
     <div className="appointments-container">
-      <div className="appointment-card" key={appointment.id}>
+      <div className="client-appointment-card" key={appointment.id}>
         <div className="profile-img">
           <img
             src={appointment.consultantImg}

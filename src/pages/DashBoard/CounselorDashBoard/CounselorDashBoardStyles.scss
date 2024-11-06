@@ -2,7 +2,10 @@
 
 .counselor-dashboard-container {
   width: 100%;
-  padding: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-bottom: 10px;
+  padding-top: 85px;
   box-sizing: border-box;
   background-color: sysColors.$primary-bg-color;
 
@@ -54,7 +57,7 @@
     .chart {
       width: 100%;
       max-width: 400px;
-      background-color: #fff;
+      background-color: sysColors.$card-bg-color;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

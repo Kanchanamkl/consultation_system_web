@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AdminAppointmentsStyles.scss";
-import TableComponent from "../../../components/Table/Table";
+import Table from "../../../components/Table/Table";
 import admin_appointmentsData from "../../../assets/tempdata/admin_appointmentsData";
 
 const AdminAppointments = () => {
@@ -47,7 +47,7 @@ const AdminAppointments = () => {
         <button className={filter === "Upcoming" ? "active" : ""} onClick={() => handleFilterChange("Upcoming")}>Upcoming</button>
         <button className={filter === "Complete" ? "active" : ""} onClick={() => handleFilterChange("Complete")}>Complete</button>
       </div>
-      <TableComponent headers={headers} body={body} />
+      <Table headers={headers} body={body} />
     </div>
   );
 };
