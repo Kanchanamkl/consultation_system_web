@@ -103,7 +103,7 @@ const CounselorAppointments = () => {
 
   return (
     <div className="counselor-appointments-container">
-      <SectionContainer title={"Today's Sessions"}>
+      <SectionContainer title={"Today Sessions"}>
         <div className="appointments-section">
           <div className="appointments-list">
             {todayAppointments.map((appointment) => (

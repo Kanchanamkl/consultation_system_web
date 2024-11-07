@@ -22,6 +22,7 @@ import CounselorAppointments from "./pages/Appointments/CounselorAppointments/Co
 import AdminDashBoard from "./pages/DashBoard/AdminDashBoard/AdminDashBoard";
 import CounselorDashBoard from "./pages/DashBoard/CounselorDashBoard/CounselorDashBoard";
 import ClientDashboard from "./pages/DashBoard/ClientDashBoard/ClientDashboard";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const { isLoggedIn, role } = useContext(StoreContext);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/consultant-register" element={<ConsultantRegister />} />
         </Routes>
+        <Footer/>
       </>
     );
   } else {
@@ -53,6 +55,7 @@ function App() {
               <Route path="/book" element={<BookingPage />} />
               <Route path="/add-counselor" element={<AddCounselor />} />
             </Routes>
+            <Footer />
           </>
         );
       case "COUNSELOR":
@@ -66,6 +69,7 @@ function App() {
               <Route path="/profile" element={<CounsellorProfile />} />
               <Route path="/meeting-page" element={<MeetingPage />} />
             </Routes>
+            <Footer />
           </>
         );
       case "CLIENT":
@@ -81,6 +85,7 @@ function App() {
               <Route path="/meeting-page" element={<MeetingPage />} />
               <Route path="/consultants" element={<Consultants />} />
             </Routes>
+            <Footer />
           </>
         );
       default:
@@ -96,6 +101,7 @@ function App() {
                 element={<ConsultantRegister />}
               />
             </Routes>
+            <Footer />
           </>
         );
     }

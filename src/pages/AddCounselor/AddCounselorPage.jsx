@@ -51,7 +51,7 @@ const AddCounselor = () => {
     setIsPsychiatrist(event.target.value === "yes");
   };
   return (
-    <div className="add-counselor-container">
+    <><div className="add-counselor-container">
       <div className="registration-form">
         <h2>Add Counseller</h2>
         <form onSubmit={handleSubmit}>
@@ -61,8 +61,7 @@ const AddCounselor = () => {
               type="text"
               placeholder="Enter First Name"
               id="firstName"
-              required
-            />
+              required />
           </div>
           <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
@@ -70,8 +69,7 @@ const AddCounselor = () => {
               type="text"
               placeholder="Enter Last Name"
               id="lastName"
-              required
-            />
+              required />
           </div>
           <div className="form-group">
             <label htmlFor="age">Age</label>
@@ -91,8 +89,7 @@ const AddCounselor = () => {
               type="text"
               placeholder="Enter District"
               id="district"
-              required
-            />
+              required />
           </div>
           <div className="form-group">
             <label>Are you a psychiatrist?</label>
@@ -103,16 +100,14 @@ const AddCounselor = () => {
                 id="yes"
                 name="psychiatrist"
                 value="yes"
-                onChange={handlePsychiatristChange}
-              />
+                onChange={handlePsychiatristChange} />
               <label htmlFor="no">No</label>
               <input
                 type="radio"
                 id="no"
                 name="psychiatrist"
                 value="no"
-                onChange={handlePsychiatristChange}
-              />
+                onChange={handlePsychiatristChange} />
             </div>
           </div>
           {isPsychiatrist && (
@@ -142,8 +137,7 @@ const AddCounselor = () => {
             <textarea
               placeholder="Describe Experience"
               id="experience"
-              required
-            />
+              required />
           </div>
           <div className="form-group">
             <label htmlFor="signature">Signature</label>
@@ -161,7 +155,7 @@ const AddCounselor = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </div><Footer /></>
   );
 };
 
